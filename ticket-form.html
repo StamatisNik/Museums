@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- na kleinw to select-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +27,7 @@
             </div>
             
             <div class="header-item-2">
-            <img src="museum-logo.png" alt="Vatican Museum logo" title="MVSEI  VATICANI">
+            <img class="logo" src="museum-logo.png" alt="Vatican Museum logo" title="MVSEI  VATICANI">
 
             </div>
             
@@ -36,22 +37,63 @@
                 </nav>
                 </header>
 
-    <div class="container m-lg-3">
-        <div class="row mt-3 ">
+    <div class="container d-flex justify-content-center">
+        <div class="row mt-5 mx-5">
             <h1>Book your tickets</h1>
 
         </div>
         
     </div>
     
-    <div class="container m-lg-3">
+    <div class="container">
         <form>
-            <div class="form-group row ">
-              <label for="First-name" class="col-md-2 col-form-label">First Name</label>
-              <div class="col-md-4 mb-3">
-                <input type="text" class="form-control" id="First-name">
+            <div class="row">
+              <div class="col-md-5 ">
+                <hr class="w-100 ">
+               
               </div>
+              
+                </div>
+
+            
+            
+            <div class="row ">
+            <label for="people-group-id" class="col-md-6 col-form-label ">How many people are in your group? </label>
+            <div class="col-md-6">
+
+              <select class="select-group" id="people-group-id" name="people-group">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              
             </div>
+
+            
+            
+          </div>
+          
+          
+
+          <div class="row mb-5 d-flex justify-content-center">
+            <div class="col-md-5">
+              <hr class="w-100 ">
+            </div>
+              </div>
+
+         
+
+          <div class="form-group row ">
+            <label for="First-name" class="col-md-2 col-form-label">First Name</label>
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" id="First-name">
+            </div>
+
+            </div>
+
             <div class="form-group row">
               <label for="surname-id" class="col-md-2 col-form-label">Surname</label>
               <div class="col-md-4 mb-3">
@@ -333,28 +375,71 @@
                     </select>
                 </div>
 
-                <div class="form-check row  m-lg-3 mt-3" >
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+                <div class="form-group row">
+                  <label for="dateId" class="col-md-2 col-form-label">Pick a date</label>
+                  <div class="col-md-4 mb-3">
+                    <input type="date" class="form-control " id="dateId">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="timeId" class="col-md-2 col-form-label">Choose time</label>
+                  <div class="col-md-4 mb-3">
+                    <select id="timeId" name="time-pick" class="form-control">
+                      <option id="time0" value="9:00">9:00</option>
+                      <option id="time1" value="9:15">9:15</option>
+                      <option id="time2" value="9:30"> 9:30</option>
+                      <option id="time3" value="9:45">9:45</option>
+                      <option id="time4" value="10:00">10:00</option>
+                      <option id="time5" value="10:15">10:15</option>
+                      <option id="time6" value="10:30">10:30</option>
+                      <option id="time7" value="10:45">10:45</option>
+                      <option id="time8" value="11:00">11:00</option>
+                      <option id="time9" value="11:15">11:15</option>
+                      <option id="time10" value="11:30">11:30</option>
+                      <option id="time11" value="11:45">11:45</option>
+                      <option id="time12" value="12:00">12:00</option>
+                      <option id="time13" value="12:15">12:15</option>
+                      <option id="time14" value="12:30">12:30</option>
+                      <option id="time15" value="12:45">12:45</option>
+                      <option id="time16" value="13:00">13:00</option>
+                      <option id="time17" value="13:15">13:15</option>
+                      <option id="time18" value="13:30">13:30</option>
+                      <option id="time19" value="13:45">13:45</option>
+                      <option id="time20"value="14:00">14:00</option>
+                      <option id="time21"value="14:15">14:15</option>
+                      <option id="time22"value="14:30">14:30</option>
+                      <option id="time23"value="14:45">14:45</option>
+                      <option id="time24" value="15:00">15:00</option>
+                      <option id="time25" value="15:15">15:15</option>
+                      <option id="time26" value="15:30">15:30</option>
+                      <option id="time27" value="15:45">15:45</option>
+                      <option id="time28" value="16:00">16:00</option>
+                    </select>
+                  </div>
+                </div>
+
+                 <div class="form-check row  m-lg-3">
+                    <input class="form-check-input" type="checkbox"id="defaultCheck1" required>
                     <label class="form-check-label" for="defaultCheck1">
                       I accept the <a href="#" class="clr" id="termsId"> Terms and Conditions</a>
                     </label>
 
               </div>
+
+               
+
+              
               <div class="row m-lg-0 mt-3">
                 <p>Your order will be processed and your tickets emailed to you as soon as possible.</p>
               </div>
                     
                 </div>
-
-               
-           
                   
           </form>
 
     </div>
     
-      
-
         <footer>
             <nav class="bottom-navbar ">
                 <div class="flex-container">
@@ -381,6 +466,13 @@
                     <div class="col-md mb-1">
                     <p class="i">  Vatican Museum <a href="https://www.google.com/maps/d/viewer?hl=en&mid=1KGmLWr2qy5HWj_53I4NoBLFneyE&ll=41.90675000000004%2C12.453394999999995&z=17" target="_blank" class="map"> Map</a>  </p>
                  </div>
+
+                 <div class="row-md mb-1">
+                  <p class="i">
+                    Piazza della Citta Leonina, Rome
+                  </p>
+              </div>
+
                 <div class="row-md mb-1">
                    <p class="i">00120, Vatican City</p> 
 
@@ -388,12 +480,22 @@
                 
                 <div class="row-md mb-1">
                     <p class="i">
-                        +39 06 6988 4676
+                      Phone:+39 06 6988 4676
                     </p>
                     
                     
                 </div>
+
+                <div class="row-md mb-1">
+                  <p class="i">
+                    Email: info@thevaticanmuseums.com
+                  </p>
+                  
+              </div>
                    
+              
+                
+
 
                 </div>
                
