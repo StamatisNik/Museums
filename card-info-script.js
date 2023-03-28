@@ -1,5 +1,6 @@
 linkStyle();
 getCurrentDate();
+regexForCardValidation();
 function linkStyle()
 {
   const anc=document.getElementById("info-id");
@@ -24,13 +25,11 @@ function getCurrentDate()
   let today = new Date();
   let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   let yyyy = today.getFullYear();
-   
-  today = yyyy + '-' + mm;
 
-  cDateV.value=today;
+  today= yyyy + '-' + mm;
+  cDateV.value=String(today);
   cDateV.min=String(today);
-    console.log(cDateV);
-  return today
+    
 
 }
 
@@ -40,20 +39,39 @@ function regexForCardValidation(){
     const amexCheck=/^(?:3[47][0-9]{13})$/;
     const dinersClubCheck=/^(?:3(?:0[0-5]|[68][0-9])[0-9]{11})$/;
     const cardNo= document.getElementById("card-no");
-    const newCardNo=cardNo;
+
+   
     console.log(cardNo.value);
-    newCardNo.value=cardNo.value.replace(/[^0-9]/g,"");
-    console.log(newCardNo.value);
-
-
     
-      if(newCardNo.value.match(mastercardCheck)|newCardNo.value.match(amexCheck)|newCardNo.value.match(visaCheck)|newCardNo.value.match(dinersClubCheck) )
+    const cardAlert=document.getElementById("alertbox-id")
+
+    cardNo.addEventListener("blur",function()
+    {
+      cardNo.value=cardNo.value.replace(/[^0-9]/g,"");
+     
+      if(cardNo.value==='')
       {
-        return true;
+        console.log(cardNo.value)
+        cardAlert.classList.remove("alertboxShow");
+        cardAlert.classList.add("alertbox");
+        
+
+      }
+      if(cardNo.value.match(mastercardCheck)|cardNo.value.match(amexCheck)|cardNo.value.match(visaCheck)|cardNo.value.match(dinersClubCheck) )
+      {
+        console.log(cardNo.value)
+        cardAlert.classList.remove("alertboxShow");
+        cardAlert.classList.add("alertbox");
+       
+        
       }
     
     else{
-        alert("This dosen't match to a card number");
-        cardNo.value=""
+      console.log(cardNo.value)
+      cardAlert.classList.remove("alertbox");
+        cardAlert.classList.add("alertboxShow");
     }
+
+    })
+     
 }

@@ -2,6 +2,8 @@ linkStyle();
 confirmEmail();
 x=getCurrentDate();
 getCurrentTime(x);
+groupPeopleInput();
+
 function linkStyle()
 {
   const anc=document.getElementById("ticket-book");
@@ -21,18 +23,58 @@ function linkStyle()
 
 function confirmEmail()
 {
-const email=document.getElementById("Email-id").value;
-const confEmail=document.getElementById("Confirm-email").value;
-if(email != confEmail) {
-  alert('Email Not Matching!');
+let email=document.getElementById("Email-id");
+let confEmail=document.getElementById("Confirm-email");
+let al=document.getElementById("alertbox-id");
+
+console.log(email);
+console.log(confEmail);
+
+confEmail.addEventListener("input" ,function()
+{
+  if (!email.value || !confEmail.value) {
+    al.classList.remove("alertboxShow");
+    al.classList.add("alertbox");
+    
+  }
+  else if (email.value !== confEmail.value) {
+    al.classList.remove("alertbox");
+    al.classList.add("alertboxShow");
+  } else {
+    al.classList.remove("alertboxShow");
+    al.classList.add("alertbox");
+  }
+})
+ 
+email.addEventListener("input" ,function()
+{
+  if (!email.value || !confEmail.value) {
+    al.classList.remove("alertboxShow");
+    al.classList.add("alertbox");
+    
+  }
+  else if (email.value !== confEmail.value) {
+    al.classList.remove("alertbox");
+    al.classList.add("alertboxShow");
+  } else {
+    al.classList.remove("alertboxShow");
+    al.classList.add("alertbox");
+  }
+})
+ 
 }
-}
+
+
+
+  
+
+
 function getCurrentDate()
 {
   let cDate=document.getElementById("dateId")
   let today = new Date();
   let dd = String(today.getDate()).padStart(2, '0');
-  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); 
   let yyyy = today.getFullYear();
 
   today = yyyy + '-' + mm + '-' + dd;
@@ -86,3 +128,77 @@ function getCurrentTime(dateToday)
   
 
 }
+
+function groupPeopleInput()
+{
+  const form=document.getElementById("ticket-form");
+  let peopleNumber=document.getElementById("people-group-id");
+  let fName=document.getElementById("First-name");
+  let lName=document.getElementById("surname-id");
+  let emailName=document.getElementById("Email-id");
+  let confEmailName=document.getElementById("Confirm-email");
+  let cityName=document.getElementById("city-id");
+  let checkbox=document.getElementById("defaultCheck1");
+ 
+  peopleNumber.addEventListener("input",function()
+  {
+   
+    let count=1;
+   
+
+    form.addEventListener('submit', function(event) {
+     
+
+      if(count!==parseInt(peopleNumber.value))
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"x"+" " +fName.value+" "+lName.value;
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+        cityName.value="";
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      else if(count===parseInt(peopleNumber.value))
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"x"+" " +fName.value+" "+lName.value;
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      
+      
+    
+
+    })
+  
+    
+    
+ 
+  
+  
+    })
+  }
+  
+
+ 
+
+

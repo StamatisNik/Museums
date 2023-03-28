@@ -43,7 +43,7 @@ h1,h2 , .clr-d{
         display: inline-block;
         padding: 15px;
         margin: 10px;
-        font-family:"Raleway";
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";;
         font-weight: bold;
 
 }
@@ -62,7 +62,7 @@ h1,h2 , .clr-d{
         max-width: 100%;
         display: inline-block;
         padding: 15px;
-        font-family:"Raleway";
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";;
         font-weight: bold;
 
 }
@@ -165,7 +165,7 @@ footer
     width: 100%;
     background-color:gainsboro;
     height: 100%;
-    height: 350px;
+    height: 230px;
 
 }
 
@@ -220,4 +220,47 @@ label
 .vis{
 width: 80px;
 height: 80px;
+}
+
+.alertbox
+{
+   display: none;
+    
+}
+
+.alertboxShow
+{
+   display: block;
+    font-size: 18px;
+    margin-left: 130px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.submit-button
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    padding: 15px;
+    font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+    font-weight: bold;
+    border: none;
+}
+
+.submit-button:hover
+{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
 }
