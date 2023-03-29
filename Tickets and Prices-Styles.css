@@ -1,0 +1,125 @@
+body
+{
+    scroll-behavior: smooth;
+}
+header{
+  
+    max-width: 100%;
+    
+}
+  
+
+article
+{
+    font-size: 32px;
+}
+
+
+
+
+.logo{
+    
+    width: 256px;
+    margin: 0 auto;
+  
+}
+
+.dropdown-menu{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+
+h1{
+    font-size: 7rem;
+    width: 100%;
+   
+}
+
+p{
+    margin-left: 40px;
+}
+
+li{
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#read-more
+{
+cursor: pointer;
+}
+
+.display-none
+{
+    display: none;
+}
+
+.display-more
+{
+    display: block;
+}
+
+.read-more-anchor{
+    text-decoration: none;
+    color: black;
+}
+
+hr
+{
+    color: black;
+    height: 4px;
+    border: 3px solid black;
+}
+
+.submit-button
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    padding: 15px;
+    font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+    font-weight: bold;
+    border: none;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.book :hover
+{
+    cursor: pointer;
+    background-color: rgb(43, 43, 227);
+    color: white;
+    transition: 0.3s;
+
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+ 
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+
+  [type=radio]:checked + img {
+    outline: 2px solid #f00;
+  }
+
+  img
+  {
+    width: 350px;
+  }
