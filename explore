@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleexplore.css">
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -29,8 +29,8 @@
                       </form> </li>
                     <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Book Ticket</a></li>
-                  <li><a class="dropdown-item" href="#">Explore</a></li>
-                  <li><a class="dropdown-item" href="#">What's on</a></li>
+                  <li><a class="dropdown-item" href="whatson.html">What's on</a></li>
+                  <li><a class="dropdown-item" href="home.html">Home</a></li>
                 </ul>
               </li>
             </ul>
@@ -66,9 +66,9 @@
           </p>
           </div>
           <div id="carousel1" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active"><img src="im17.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling"></div>
-                <div class="carousel-item"><img src="im18.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling"></div>
+              <div class="carousel-inner"> 
+                <div class="carousel-item active"><img src="im18.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling drawings"></div>
+                <div class="carousel-item"><img src="im31.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling with window"></div>
                 <div class="carousel-item"><img src="im19.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling"></div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
@@ -233,76 +233,70 @@
       </div>
     </main>
 
-<footer>
-
-      <div class="navbar navbar-expand bg-dark">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="footernavbar">
+    <footer>
+      <nav class="navbar navbar-expand bg-dark">
+          <div class="container">
+            <div class="collapse navbar-collapse" id="footernavbar">
+                <div class="col-md-4 text-center">
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CREATED BY:</p>
+                <div class="row">
+                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">Nicole Nicolaou</p>
+                </div>
+                <div class="row">
+                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6"> Stamatis Nicoloudakis</p>
+                </div>
+              </div>
+  
               <div class="col-md-4 text-center">
-              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-3">ABOUT</p>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0  text-decoration-underline fs-6" href="#">bla bla bla 1</a>
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CONTACT US:</p>
+                <div class="row">
+                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">nicole.nicolaou811@gmail.com</p>
+                </div>
+                <div class="row">
+                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">stamatisnik10@gmail.com</p>
+                </div>
+                
               </div>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0  text-decoration-underline fs-6" href="#" >bla bla bla 2</a>
+  
+              <div class="col-md-4 text-center">
+              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">FOLLOW</p>
+              <div class="row-cols-md-3 mb-2">
+                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.facebook.com/people/Vatican-Museums-Musei-Vaticani/100066358103032/" >Facebook</a>
               </div>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0  text-decoration-underline fs-6" href="#" >bla bla bla 3</a>
+              <div class="row-cols-md-3 mb-2">
+                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.instagram.com/vaticanmuseums/?hl=el">Instagram</a>
+              </div> 
               </div>
-            </div>
-
-            <div class="col-md-4 text-center">
-              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-3">CONTACT US</p>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="stamatisnik10@gmail.com">stamatisnik10@gmail.com</a>
               </div>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="nicole.nicolaou811@gmail.com">nicole.nicolaou811@gmail.com</a>
-              </div>
-              <div class="row">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://github.com/StamatisNik/Museums">https://github.com/StamatisNik/Museums</a>
-              </div>
+            
             </div>
-
-            <div class="col-md-4 text-center">
-            <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-3">FOLLOW US</p>
-            <div class="row">
-              <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.facebook.com/people/Vatican-Museums-Musei-Vaticani/100066358103032/" >Facebook</a>
-            </div>
-            <div class="row">
-              <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.instagram.com/vaticanmuseums/?hl=el">Instagram</a>
-            </div>
-            <div class="row">
-              <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.youtube.com/@VaticanNews">Youtube</a>
-            </div>
-            </div>
-            </div>
-          
+      </nav>
+        <hr>
+        <div class="container">
+    
+        <div class="row" >
+          <div class="col-md-4 text-center">    
+            <a class="text-decoration-underline fs-7 text-secondary" href="">cookies </a>
           </div>
-
-        </div>
-      <hr>
-      <div class="row" >
-        <div class="col-md-4 text-center">    
-          <a class="text-decoration-underline fs-7 text-secondary" href="">cookies </a>
-
-        </div>
-
-        <div class="col-md-4 text-center">    
-          <a class="text-decoration-underline fs-7 text-secondary " href="">privacy policy </a>
-
-        </div>
-
-        <div class="col-md-4 text-center">    
-          <a class="text-decoration-underline fs-7 text-secondary" href="">copyrights </a>
-
-        </div>
-        
+  
+          <div class="col-md-4 text-center">    
+            <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
+            The Vatican Museum values your privacy and is committed to protecting your personal information. We only collect information that is necessary for providing our services, and we will never sell or share your information with third parties. We use secure methods to store your information and comply with all applicable data protection laws. By using our website, you agree to the terms of this privacy policy
+            If you have any questions or concerns about our privacy policy or our use of your personal information, please contact us at nicole.nicolaou811@gmail.com / stamatisnik10@gmail.com."
+            data-content="privacy policy">privacy policy</div>
+          </div>
+  
+          <div class="col-md-4 text-center">    
+            <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
+            All content on this website is protected by copyright laws and may not be reproduced, distributed, transmitted, or otherwise used without prior written permission from the website owner."
+            data-content="copyrights">copyrights</div>
+          </div>
+          
+      </div>
     </div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
- 
+    <script src="scripthome.js"></script>
   </body>
   </html>
