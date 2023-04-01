@@ -39,4 +39,10 @@ header{
     max-height: 550px;
     margin: 0 auto;
   }
+ 
+.dec{
+    text-decoration: none;
+    color: white;
+}
+
 
