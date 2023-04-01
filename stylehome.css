@@ -12,7 +12,6 @@ header{
     width: 100%;
     height: 680px;
     margin: 0 auto;
-   
 }
 
 article{
@@ -30,7 +29,6 @@ article{
     width: 5;
     height: 5;
 }
-
 
 #logo{
     width: 256px;
@@ -62,7 +60,7 @@ article{
 .book :hover
 {
     cursor: pointer;
-    background-color: rgb(43, 43, 227);
+    background-color: darkslategray;
     color: white;
     transition: 0.3s;
 
@@ -75,13 +73,12 @@ article{
 .text-dark{
     font-weight: bold;
     text-decoration: none;
-
 }
 
 .aa
 {
-padding-top: 250px;
-padding-left: 30px;
+    padding-top: 250px;
+    padding-left: 30px;
 }
 
 .bnh2{
@@ -91,6 +88,29 @@ padding-left: 30px;
 
 .bnh
 {
-    padding-top: 210px;
+    padding-top: 170px;
     padding-left: 9px;
+}
+
+.effect{
+    color: rgba(0, 0, 0, 0.875);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.effect:hover{
+    font-size: larger;
+    color: darkslategray ;
+    transition: 0.5s;
+}
+
+.effect2 {
+    color: rgba(0, 0, 0, 0.875);
+    font-weight: bold;
+
+}
+
+
+svg{
+    padding-bottom: 3px;
 }
