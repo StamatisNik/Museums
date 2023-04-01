@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore</title>
-    <link rel="stylesheet" href="styleexplore.css">
+    <title>What's on</title>
+    <link rel="stylesheet" href="stylewhatson.css">
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
     <header>
-      <nav class="navbar navbar-expand bg-dark">
+    <nav class="navbar navbar-expand bg-dark">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-3 mb-lg-0">
@@ -24,14 +25,14 @@
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                   </svg> Menu</a>
                 <ul class="dropdown-menu">
-                    <li><form class="d-flex search-form" role="search">
-                        <input class="form-control me-2 mx-1" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success mx-2" type="submit">Search</button>
+                    <li> <form class="d-flex" role="search">
+                      <input class="form-control me-2 mx-1" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success mx-2" type="submit">Search</button>
                       </form> </li>
                     <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Book Ticket</a></li>
+                    <li><a class="dropdown-item" href="home.html">Home</a></li>
+                  <li><a class="dropdown-item" href="Tickets and Prices">Book Tickets</a></li>
                   <li><a class="dropdown-item" href="explore.html">Explore</a></li>
-                  <li><a class="dropdown-item" href="whatson.html">What's on</a></li>
                 </ul>
               </li>
             </ul>
@@ -39,264 +40,200 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+          
           </div>
         </div>
     </nav>
-    </header>
+
+</header>
     <main class="my-5">
-      <div class="container">
-        
-        <div class="row">
-          <hr>
-          <div class="col-md-5">
-            <h1 class="mt-5 text-center text-decoration-underline">VATICAN MUSEUM</h1>
-            <p class="mt-4">
-              <hr>
-                The <strong>Vatican Historical Museum </strong>was founded in <strong>1973</strong> at the behest of Paul VI, and was initially hosted in environments under the Square Garden. 
-              In 1987, it moved to the main floor of the Lateran Palace, where it opened in March 1991.
-            </p>
-            <p>
-            The Vatican Museums house the exquisite art collections, archeology and ethnology created by the various Pontiffs over the centuries, 
-            but they also feature some of the most unique and historically and artistically significant places of the Apostolic Palaces.
-          </p>
-          <p>
-            <strong>The most famous art pieces in the Vatican City are:</strong> <ul> <li>Sistine Chapel's Ceiling</li>
-          <li>Stefaneschi Triptych</li> <li>Laocoön and His Sons</li> <li>Raphael Rooms</li> <li>Saint Longinus</li><li>The Entombment of Christ</li> <li>St Jerome in the Wilderness</li> <li>Belvedere Torso</li> <li>Annunciation</li></ul>
-          <hr>
-          </p>
-          </div>
-          <div id="carousel1" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <div class="carousel-item active"><img src="im18.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling drawings"></div>
-                <div class="carousel-item"><img src="im31.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling with window"></div>
-                <div class="carousel-item"><img src="im19.jpg" class="d-block w-100 h-100" alt="vatican museum ceiling"></div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-            
-        <div class="row">
-          <p>            </p>
-          <hr>
-          <div id="carousel2" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
+		<div class="container">
+			<div class="row my-5">
+				<div class="col"> </div> 
+				<div class="bg-dark text-white my-3 py-3 card text-center">
+				   <h3 class="card-body"> EXHIBITS </h3>
+			   </div> 
+		   </div>
+           <div id="carouselwithCaptions" class="carousel slide" data-bs-ride="false">
+
             <div class="carousel-inner">
-              <div class="carousel-item active"><img src="im20.jpg" class="d-block w-100 h-120" alt="The Pope"></div>
-              <div class="carousel-item"><img src="im21.JPG" class="d-block w-100 h-120" alt="The Pope praying"></div>
-              <div class="carousel-item"><img src="im22.JPG" class="d-block w-100 h-120" alt="The pope and a child"></div>
+              <div class="carousel-item active">
+                <img src="im1.PNG" class="d-block w-100" alt="Marble Cherubs statue">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="bg-dark opacity-75">Marble Cherubs, St Peters Cathedral.</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="im7.JPG" class="d-block w-100" alt="Allegory of the Nile River.">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="bg-dark opacity-75">Roman sculpture: <p>Allegory of the Nile River.</p> </h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="im8.JPG" class="d-block w-100" alt="Pericles with the Corinthian helmet">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="bg-dark opacity-75">Pericles with the Corinthian helmet</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="im14.PNG" class="d-block w-100" alt="Saint Theresa of Jesus">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="bg-dark opacity-75">Saint Theresa of Jesus</h5>
+                </div>
+              </div>
+              <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#carouselwithCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselwithCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselwithCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselwithCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselwithCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselwithCaptions" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <div class="col-md-5">
-              <h1 class="mt-5 text-center text-decoration-underline">THE POPE</h1>
-              <p class="mt-4">
-                <hr>
-                The Pope, is the bishop of Rome head of the worldwide Catholic Church. The pope, has also served as 
-                the head of state or sovereign of the Papal States and later the Vatican City State since the eighth century.
-                From a Catholic viewpoint, the primacy of the bishop of Rome is largely derived from his role as the apostolic 
-                successor to Saint Peter, to whom primacy was conferred by Jesus, who gave Peter the Keys of Heaven and the powers of 
-                "binding and loosing", naming him as the "rock" upon which the Church would be built. 
-              </p>
-              <p><strong>The current pope is Francis, who was elected on 13 March 2013.</strong>
-              </p>
-              <p>Pope Francis, was born in Jorge Mario Bergoglio on 17 December 1936.</p>
-              <p>Anyone who wants to see the Pope should consider either a Wednesday or a Sunday visit to St. Peter's Basilica. On both days, 
-              visitors can attend an event that will allow them to see or at least listen to the Pope.
-                <hr>
-              </p>
-          </div>		
-        </div>
-    
-        <div class="row">
-          <p>                                 </p>
-          <hr>
-          <div class="col-md-5">
-            <h1 class="mt-5 text-center text-decoration-underline">SISTINE CHAPEL</h1>
-            <p class="mt-4">
-              <hr>The iconic Sistine Chapel is most likely on the top of your bucket list. The spectacular building is 
-              one of the most well-known in the world, with its interior decoration renown worldwide.
-              Although the outside architecture is a beauty in itself, the real winner is the frescoes decorating the walls,
-               and most importantly the ceiling. Painted by famous artist, Michelangelo, the master of the Renaissance period.
-              Painting the ceiling of the Sistine Chapel was not an easy decision for Michelangelo however. 
-              Starting in 1508, the ceiling took over 4 years to complete, becoming his greatest torment and his greatest success. 
-              You can see the incredible amount of hard work that went into the project by the intricately detailed design, depicting
-              three hundred figures with hidden meanings for each. This ceiling's immense beauty is well worth the crick in your neck!
-            </p>
-            <p>The Chapel is the <strong>only</strong> place in the Vatican that <strong>photography and filming are completely banned</strong>. 
-              Undoubtedly one of the world's most famous buildings,the Sistine Chapel is a testament to the immense skill of history's greatest 
-              artists within the Renaissance era.
-            <hr></p>
-          </div>
-          <div id="carousel3" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active"><img src="im23.jpg" class="d-block w-100 h-120" alt="Sistine chapel drawing"></div>
-                <div class="carousel-item"><img src="im24.jpg" class="d-block w-100 h-120" alt="Sistine chapel"></div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-            
-        <div class="row">
-          <p> 			</p>
-          <hr>
-          <div class="col-md-7">
-            <img src="im25.jpg" class="d-block w-100 h-120" alt="Lapieta">
-          </div>
-          <div class="col-md-5">
-              <h1 class="mt-5 text-center text-decoration-underline">	LA PIETA</h1>
-              <p class="mt-4">
-                <hr>
-                La Pietà is a Roman Catholic dolorous image of Jesus and Mary at Mount Golgotha representing the “Sixth Sorrow”
-                of the Blessed Virgin Mary and a key work of Italian Renaissance sculpture carved by Michelangelo Buonarroti,
-                now enshrined within Saint Peter's Basilica, Vatican City.
-                It is the first of a number of works of the same subject by the Florentine artist.
-              </p>
-              <p>
-               The statue was originally commissioned for a Cardinal of France, Jean Bilhères de Lagraulas, a serving French ambassador in Rome.
-               The Carrara marble sculpture was made for the cardinal's funeral monument, but was moved to its current location, the first chapel
-              on the north side after the entrance of the basilica, in the 18th century.
-               <strong>It is the only piece Michelangelo ever signed.</strong>  This interpretation of the Pietà is unprecedented in Italian sculpture
-              because it balances the Renaissance ideals of classical beauty with naturalism.
-              <hr>
-              </p>
-          </div>
-          <hr>		
-        </div>
-        <div class="row my-5">
-          <div class="col"> </div> 
-          <div class="bg-dark text-white my-3 py-3 card text-center">
-             <h4 class="card-body text-decoration-underline fs-2"> Trending Now! </h4>
-           </div> 
-         </div>
-    
-         <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-90">
-            <img src="im26.PNG"  class="card-img-top" alt="SanGiuseppe">
-            <div class="card-body">
-            <h5 class="card-title">vaticanmuseums</h5>
-            <p class="card-text">🇮🇹Oggi #SanGiuseppe è la #festadelpapà!</p>
-            <a href="https://www.instagram.com/p/Cp99kOjDeHF"><button type="button" class="btn btn-primary">Open Instagram</button></a>
-            </div>
-          </div>
-          </div>
-           <div class="col">
-           <div class="card h-100">
-             <div class="card-body">
-             <h5 class="card-title text-center">Women's Day: Vatican Museums art celebrates the 'female genius'</h5>
-             <p class="card-text">The Vatican Museums are participating in the celebration of International Women's Day with special guided tours to discover extraordinary female figures who, 
-              through their holiness, have contributed significantly to the life of the Church.</p>
-              <p>Paolo Ondarza - Vatican City
-    
-                Mary Magdalene, St. Scholastica, St. Helena, St. Catherine of Siena, and the Virgin Mary: exemplary models of womanhood. There are many women in the Church's history who, still today, serve as inspirations through their lives of holiness.
-                
-                Painters throughout the centuries have dedicated some of their most significant pieces of art history to these women.  </p>
-                <p class="text-center"><strong>She who makes the world beautiful</strong></p>
-                <p>Beginning with Pope Francis' words.... </p>
-             <a href="https://www.vaticannews.va/en/vatican-city/news/2023-03/womens-day-celebrating-female-genius-through-art.html"><button type="button" class="btn btn-primary">Read More</button></a>
-           </div>
-           </div>
-          </div>
-            <div class="col">
-            <div class="card h-100">
-              <img src="im27.PNG" class="card-img-top" alt="youtubevideo">
-              <div class="card-body">
-               <h4 class="card-title"><strong>March 22 2023, Angelus and Rosary</strong></h4>
-               <p class="card-text">
-              Recitation of the Angelus prayer and the Rosary from the Holy House in Loreto...</p>
-              <a href="https://www.youtube.com/watch?v=0QGzLaTz4LQ"><button type="button" class="btn btn-primary">Watch now</button></a>
-              </div>
-            </div>
-            </div>
-         </div>
-    
-      </div>
-    </main>
 
-    <footer>
-      <nav class="navbar navbar-expand bg-dark">
-          <div class="container">
-            <div class="collapse navbar-collapse" id="footernavbar">
-                <div class="col-md-4 text-center">
-                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CREATED BY:</p>
-                <div class="row">
-                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">Nicole Nicolaou</p>
-                </div>
-                <div class="row">
-                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6"> Stamatis Nicoloudakis</p>
-                </div>
-              </div>
-  
-              <div class="col-md-4 text-center">
-                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CONTACT US:</p>
-                <div class="row">
-                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">nicole.nicolaou811@gmail.com</p>
-                </div>
-                <div class="row">
-                  <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">stamatisnik10@gmail.com</p>
-                </div>
-                
-              </div>
-  
-              <div class="col-md-4 text-center">
-              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">FOLLOW</p>
-              <div class="row-cols-md-3 mb-2">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.facebook.com/people/Vatican-Museums-Musei-Vaticani/100066358103032/" >Facebook</a>
-              </div>
-              <div class="row-cols-md-3 mb-2">
-                <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.instagram.com/vaticanmuseums/?hl=el">Instagram</a>
-              </div> 
-              </div>
-              </div>
-            
-            </div>
-      </nav>
-        <hr>
-        <div class="container">
-    
-        <div class="row" >
-          <div class="col-md-4 text-center">    
-            <a class="text-decoration-underline fs-7 text-secondary" href="">cookies </a>
-          </div>
-  
-          <div class="col-md-4 text-center">    
-            <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
-            The Vatican Museum values your privacy and is committed to protecting your personal information. We only collect information that is necessary for providing our services, and we will never sell or share your information with third parties. We use secure methods to store your information and comply with all applicable data protection laws. By using our website, you agree to the terms of this privacy policy
-            If you have any questions or concerns about our privacy policy or our use of your personal information, please contact us at nicole.nicolaou811@gmail.com / stamatisnik10@gmail.com."
-            data-content="privacy policy">privacy policy</div>
-          </div>
-  
-          <div class="col-md-4 text-center">    
-            <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
-            All content on this website is protected by copyright laws and may not be reproduced, distributed, transmitted, or otherwise used without prior written permission from the website owner."
-            data-content="copyrights">copyrights</div>
-          </div>
-          
-      </div>
+    <div class="row my-5">
+        <div class="bg-dark text-white my-3 py-3 card text-center">
+           <h3 class="card-body"> GUIDED TOURS &amp; EXHIBITIONS</h3>
+       </div>     
+
+       <div class="row bg-dark text-center">
+        <div class="col-md-4">
+            <img src="im28.jpg" alt="picture of people outside of the Vatican Museum" class="card-img-top"></div>
+        <div class="col-md-7">
+        <h4 class="mt-5 bg-warning opacity-75 ">Vatican: Museums &amp; Sistine Chapel Entrance Ticket</h4>
+        <p class="mt-4 text-white">Take a stirring journey through art and religious history with skip-the-ticket-line entry to the Vatican Museums and 
+            Sistine Chapel. Avoid the long ticket lines and then enjoy your visit at your own pace. 
+             Wander through the Greek Cross Gallery to see elaborately-carved sarcophagi that might just contain the earthly remains of some of
+              antiquity's famous kings and queens. Peek at the Cabinet of the Masks, or tour the Sala degli Animali to see a virtual menagerie of 
+              fantastic beasts, real and imagined. Walk the Upper Galleries, including the Gallery of Maps, to see how cartographers depicted the
+             world through the ages. See masterpieces by Renaissance masters in the Raphael Rooms, and rest for a while in the Borgia Apartments. 
+             Then, it's time to marvel at Michelangelo's exquisite Sistine Chapel, the crown jewel of the Vatican, and perhaps even of all the 
+             world's art treasures.</p>
+             <p class="text-white">Price: €20.00</p>
+      <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
+        </div>
+    <div> <hr class="text-white"></div>
+ </div> 
+ <div class="row bg-dark  text-center">
+    <div class="col-md-4">
+        <img src="im29.jpg" alt="picture of people in the Vatican Museum" class="card-img-top"></div>
+    <div class="col-md-7">
+    <h4 class="mt-5 bg-warning opacity-75">Early Vatican, Sistine Chapel &amp; Basilica Guided Tour</h4>
+    <p class="mt-4 text-white">Choose this early Vatican entry ticket and get the best of your Vatican Museums and Sistine Chapel visit.
+         Be among the first visitors of the Vatican Museums and see Renaissance masterpieces and Roman sculptures with an art historian guide.
+          You will be accompanied on your tour by a knowledgeable guide who will lead you through the numerous rooms of the Vatican Museums and 
+          answer your questions. Then spend some time inside the Sistine Chapel, admiring the Last Judgement and Michelangelo's famous ceiling. 
+          Your guide will explain its significance as you gaze at intricate frescoes and decorations. 
+          Then, head to St Peter's Basilica and have skip-the-line entry to avoid the queues.</p>
+          <p class="text-white">Price: €35.99</p>
+          <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
     </div>
-    </footer>
+    <div> <hr class="text-white"></div>
+</div> 
+<div class="row bg-dark  text-center">
+    <div class="col-md-4">
+        <img src="im10.JPG" alt="picture of people in the Vatican Museum" class="card-img-top"></div>
+    <div class="col-md-7">
+    <h4 class="mt-5 bg-warning opacity-75">Turning the Lights on at the Vatican Museums</h4>
+    <p class="mt-4 text-white"> Discover the Vatican Museums and their treasures in a way no 
+         other visitor can. As you explore, listen to Gianni's experiences and anecdotes of his time as head clavigero, as well as the stories
+          behind some of the 20,000 pieces on display. In the calmness of dawn, you'll have the chance to see the most impressive spaces, as well 
+          as those not open to the public. After your tour, head to the Cortile della Pigna to tuck into a delicious breakfast consisting of a 
+          croissant or pain au chocolat, pancakes with peanut butter or marmalade, an orange or apple juice, and a tea or coffee.</p>
+          <p class="text-white">Price: €43.00</p>
+          <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
+    </div>
+    <div> <hr class="text-white"></div>
+    <div class="row bg-dark  text-center">
+      <div class="col-md-4">
+          <img src="im5.JPG" alt="picture of a door in the Vatican Museum" class="card-img-top"></div>
+      <div class="col-md-7">
+      <h4 class="mt-5 bg-warning opacity-75">Vatican Museums &amp; Sistine Chapel Skip-the-Ticket-Line Tour</h4>
+      <p class="mt-4 text-white">Explore the Vatican Museums with skip-the-line tickets and see St. Peter's Basilica on a guided walking tour in Rome.
+         Step into the Sistine Chapel and admire the ceiling painted by Michelangelo.</p>
+         <p class="text-white">Price: €59.99</p>
+         <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
+      </div>
+      <div> <hr class="text-white"></div>
+  </div> 
+</div> 
+</div>
+   </div>
+		
+	</main>
+  <footer>
+    <nav class="navbar navbar-expand bg-dark">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="footernavbar">
+              <div class="col-md-4 text-center">
+              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CREATED BY:</p>
+              <div class="row">
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">Nicole Nicolaou</p>
+              </div>
+              <div class="row">
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6"> Stamatis Nicoloudakis</p>
+              </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="scripthome.js"></script>
-  </body>
-  </html>
+            <div class="col-md-4 text-center">
+              <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">CONTACT US:</p>
+              <div class="row">
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">nicole.nicolaou811@gmail.com</p>
+              </div>
+              <div class="row">
+                <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-6">stamatisnik10@gmail.com</p>
+              </div>
+              
+            </div>
+
+            <div class="col-md-4 text-center">
+            <p class="navbar-brand text-white me-auto mb-6 mb-lg-0 fs-4">FOLLOW</p>
+            <div class="row-cols-md-3 mb-2">
+              <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.facebook.com/people/Vatican-Museums-Musei-Vaticani/100066358103032/" >Facebook</a>
+            </div>
+            <div class="row-cols-md-1 mb-2">
+              <a class="navbar-brand text-white me-auto mb-6 mb-lg-0 text-decoration-underline fs-6" href="https://www.instagram.com/vaticanmuseums/?hl=el">Instagram</a>
+            </div> 
+            </div>
+            </div>
+          
+          </div>
+    </nav>
+      <hr>
+      <div class="container">
+  
+      <div class="row" >
+        <div class="col-md-4 text-center">    
+          <a class="text-decoration-underline fs-7 text-secondary" href="">cookies </a>
+        </div>
+
+        <div class="col-md-4 text-center">    
+          <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
+          The Vatican Museum values your privacy and is committed to protecting your personal information. We only collect information that is necessary for providing our services, and we will never sell or share your information with third parties. We use secure methods to store your information and comply with all applicable data protection laws. By using our website, you agree to the terms of this privacy policy
+          If you have any questions or concerns about our privacy policy or our use of your personal information, please contact us at nicole.nicolaou811@gmail.com / stamatisnik10@gmail.com."
+          data-content="privacy policy">privacy policy</div>
+        </div>
+
+        <div class="col-md-4 text-center">    
+          <div type="button" class="text-decoration-underline fs-7 text-secondary" data-toggle="popover" data-bs-placement="top" title="
+          All content on this website is protected by copyright laws and may not be reproduced, distributed, transmitted, or otherwise used without prior written permission from the website owner."
+          data-content="copyrights">copyrights</div>
+        </div>
+        
+    </div>
+  </div>
+  </footer>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <script src="scriptwhatson.js"></script>
+    </body>
+  
+    </html>
+  
