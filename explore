@@ -14,31 +14,31 @@
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand bg-dark">
+      <nav class="navbar navbar-expand bg-dark">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-3 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white  Menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="menu" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <a class="nav-link dropdown-toggle text-white  Menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="menu" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                   </svg> Menu</a>
                 <ul class="dropdown-menu">
-                    <li>  <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                    <li><form class="d-flex search-form" role="search">
+                        <input class="form-control me-2 mx-1" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success mx-2" type="submit">Search</button>
                       </form> </li>
                     <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Book Ticket</a></li>
+                  <li><a class="dropdown-item" href="explore.html">Explore</a></li>
                   <li><a class="dropdown-item" href="whatson.html">What's on</a></li>
-                  <li><a class="dropdown-item" href="home.html">Home</a></li>
                 </ul>
               </li>
             </ul>
-            <img src="museum-logo.png" class="navbar-brand text-white me-auto mb-6 mb-lg-0 " id="logo" alt="Vatican Museum logo">
+            <img src="museum-logo.png" class="navbar-brand text-white me-auto mb-6 mb-lg-0" id="logo" alt="Vatican Museum logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
           </div>
         </div>
     </nav>
