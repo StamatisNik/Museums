@@ -30,9 +30,9 @@
                       <button class="btn btn-outline-success mx-2" type="submit">Search</button>
                       </form> </li>
                     <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Book Ticket</a></li>
+                    <li><a class="dropdown-item" href="home.html">Home</a></li>
+                  <li><a class="dropdown-item" href="Tickets and Prices">Book Tickets</a></li>
                   <li><a class="dropdown-item" href="explore.html">Explore</a></li>
-                  <li><a class="dropdown-item" href="home.html">Home</a></li>
                 </ul>
               </li>
             </ul>
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="im7.JPG" class="d-block w-100" alt="Allegory of the Nile River. ">
+                <img src="im7.JPG" class="d-block w-100" alt="Allegory of the Nile River.">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="bg-dark opacity-75">Roman sculpture: <p>Allegory of the Nile River.</p> </h5>
                 </div>
@@ -116,8 +116,8 @@
              world through the ages. See masterpieces by Renaissance masters in the Raphael Rooms, and rest for a while in the Borgia Apartments. 
              Then, it's time to marvel at Michelangelo's exquisite Sistine Chapel, the crown jewel of the Vatican, and perhaps even of all the 
              world's art treasures.</p>
-             <p class="text-white">Price: €69.99</p>
-        <button type="button" class="btn btn-primary mt-3 bg-success">Book Now</button> 
+             <p class="text-white">Price: €20.00</p>
+      <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
         </div>
     <div> <hr class="text-white"></div>
  </div> 
@@ -132,8 +132,8 @@
           answer your questions. Then spend some time inside the Sistine Chapel, admiring the Last Judgement and Michelangelo's famous ceiling. 
           Your guide will explain its significance as you gaze at intricate frescoes and decorations. 
           Then, head to St Peter's Basilica and have skip-the-line entry to avoid the queues.</p>
-          <p class="text-white">Price: €56.99</p>
-    <button type="button" class="btn btn-primary mt-3 bg-success">Book Now</button>
+          <p class="text-white">Price: €35.99</p>
+          <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
     </div>
     <div> <hr class="text-white"></div>
 </div> 
@@ -147,8 +147,8 @@
           behind some of the 20,000 pieces on display. In the calmness of dawn, you'll have the chance to see the most impressive spaces, as well 
           as those not open to the public. After your tour, head to the Cortile della Pigna to tuck into a delicious breakfast consisting of a 
           croissant or pain au chocolat, pancakes with peanut butter or marmalade, an orange or apple juice, and a tea or coffee.</p>
-          <p class="text-white">Price: €97.99</p>
-    <button type="button" class="btn btn-primary mt-3 bg-success">Book Now</button>
+          <p class="text-white">Price: €43.00</p>
+          <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
     </div>
     <div> <hr class="text-white"></div>
     <div class="row bg-dark  text-center">
@@ -158,8 +158,8 @@
       <h4 class="mt-5 bg-warning opacity-75">Vatican Museums &amp; Sistine Chapel Skip-the-Ticket-Line Tour</h4>
       <p class="mt-4 text-white">Explore the Vatican Museums with skip-the-line tickets and see St. Peter's Basilica on a guided walking tour in Rome.
          Step into the Sistine Chapel and admire the ceiling painted by Michelangelo.</p>
-         <p class="text-white">Price: €43.97</p>
-      <button type="button" class="btn btn-primary mt-3 bg-success">Book Now</button>
+         <p class="text-white">Price: €59.99</p>
+         <button type="button" class="btn btn-primary mt-3 btn-success"><a class="dec" href="ticket-form.html"> Book Now </a></button> 
       </div>
       <div> <hr class="text-white"></div>
   </div> 
@@ -232,9 +232,8 @@
   </footer>
   
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      <script src="scripthome.js"></script>
+      <script src="scriptwhatson.js"></script>
     </body>
   
     </html>
-  
   
