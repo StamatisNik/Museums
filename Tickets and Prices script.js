@@ -36,7 +36,7 @@ function linkStyle()
 {
   const anc=document.getElementById("ticket-book");
   console.log(anc.href,window.location.href);
-    if(window.location.href===anc.href)
+    if(window.location.href===anc.href || window.location.href===anc.href+"#ticket-forms" || window.location.href===anc.href+"#more" )
     {
       anc.classList.remove("clr");
       anc.classList.add("change-color");

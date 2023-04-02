@@ -1,6 +1,5 @@
 body{
     font-family: 'Raleway';
-    scroll-behavior: smooth;
 }
 
 header{
@@ -45,5 +44,3 @@ header{
     text-decoration: none;
     color: white;
 }
-
-
