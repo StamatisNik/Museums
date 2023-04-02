@@ -3,7 +3,7 @@ getCurrentDate();
 regexForCardValidation();
 function linkStyle()
 {
-  const anc=document.getElementById("info-id");
+  const anc=document.getElementById("pay-id");
   console.log(anc.href,window.location.href);
     if(window.location.href===anc.href)
     {

@@ -6,7 +6,7 @@ groupPeopleInput();
 
 function linkStyle()
 {
-  const anc=document.getElementById("ticket-book");
+  const anc=document.getElementById("info-id");
   console.log(anc.href,window.location.href);
     if(window.location.href===anc.href)
     {
@@ -137,32 +137,39 @@ function groupPeopleInput()
   let lName=document.getElementById("surname-id");
   let emailName=document.getElementById("Email-id");
   let confEmailName=document.getElementById("Confirm-email");
-  let cityName=document.getElementById("city-id");
   let checkbox=document.getElementById("defaultCheck1");
+  let ticketType=document.getElementById("ticket-type-Id");
  
   peopleNumber.addEventListener("input",function()
   {
    
     let count=1;
    
-
+    let storedRadioValue=localStorage.getItem("radioValue");
+    let standardPrice=20;
+    let earlyAccesPrice=35;
+    let turnTheLightsPrice=45;
+    let skipTheLinePrice=60;
+    
     form.addEventListener('submit', function(event) {
      
-
-      if(count!==parseInt(peopleNumber.value))
+      //Standard Ticket
+      if(storedRadioValue==="Standard Ticket")
+      {
+        if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"x"+" " +fName.value+" "+lName.value;
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+standardPrice+"€";
         newName.classList.add("i");
+        total+=standardPrice;
         
         nameContainer.append(newName);
         fName.value="";
         lName.value="";
         emailName.value="";
         confEmailName.value="";
-        cityName.value="";
         checkbox.checked=false;
        
         
@@ -174,26 +181,430 @@ function groupPeopleInput()
        
       }
 
-      else if(count===parseInt(peopleNumber.value))
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€";
+        newName.classList.add("i");
+        total+=(standardPrice-0.5*standardPrice);
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+        Name.value="";
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.4*standardPrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        total+=(standardPrice-0.4*standardPrice);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"x"+" " +fName.value+" "+lName.value;
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+standardPrice+"€";
   
         newName.classList.add("i");
         nameContainer.append(newName);
       }
 
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (standardPrice-0.4*standardPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+        
+      }
+
       
+
+      //Early Access Ticket
+
+      if(storedRadioValue==="Early Access Ticket")
+      {
+        if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+earlyAccesPrice+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.4*earlyAccesPrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+earlyAccesPrice+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (earlyAccesPrice-0.4*earlyAccesPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+        
+      }
+
+
+      //Turn The light On
+      if(storedRadioValue==="Turn The lights On")
+      {
+        if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+turnTheLightsPrice+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.4*turnTheLightsPrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+turnTheLightsPrice+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (turnTheLightsPrice-0.4*turnTheLightsPrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+        
+      }
       
+      //Skip-The-Ticket-Line-Tour
+
+      if(storedRadioValue==="Skip-The-Ticket-Line-Tour")
+      {
+        if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+skipTheLinePrice+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        event.preventDefault();
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.4*skipTheLinePrice)+"€";
+        newName.classList.add("i");
+        
+        nameContainer.append(newName);
+        fName.value="";
+        lName.value="";
+        emailName.value="";
+        confEmailName.value="";
+       
+        checkbox.checked=false;
+       
+        
+        
+
+       
+        
+        count++;
+       
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+skipTheLinePrice+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+      else if(count===parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      {
+        const nameContainer=document.getElementById("name-info");
+        const newName=document.createElement("div");
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (skipTheLinePrice-0.4*skipTheLinePrice)+"€";
+  
+        newName.classList.add("i");
+        nameContainer.append(newName);
+      }
+
+        
+      }
     
 
     })
   
     
-    
- 
-  
   
     })
   }

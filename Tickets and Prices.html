@@ -41,7 +41,7 @@
                     </ul>
                   </li>
                 </ul>
-                <img src="museum-logo.png" class="navbar-brand text-white   mb-6  logo"  alt="Vatican Museum logo">
+                <img src="museum-logo.png" class="navbar-brand text-white mb-6 me-auto  logo"  alt="Vatican Museum logo">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -86,18 +86,12 @@
                         Ticket Prices  
                       </h2>
     
-                      <p>€ 20  per person, <a href="#more" class="read-more-anchor"> <span id="read-more">tap here for more information</span> </a></p>
+                      <p>Ticket prices differ depending on the exhibition,<a href="#more" class="read-more-anchor"> <span id="read-more"> tap here for more information.</span> </a></p>
 
                 </div>
            
 
-                <div class="col-md-6 text-end">
-                       <a class="book" href="ticket-form.html"> <button class="submit-button">Tickets <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
-                        <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
-                        <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
-                      </svg> </button>  </a> 
-
-                </div>
+                
 
             </div>
             
@@ -108,83 +102,178 @@
                     <h4>Ticket prices:</h4>
 
                     <ul>
-                        <li>Adults: € 20</li>
-                        <li>Visitors under 15: € 12 (school groups excluded)</li>
-                        <li> Students: € 10 upon presentation of your (international) student card or proof of enrolment.</li>
-                       
-
+                        <li>Adults: Full price.</li>
+                        <li>Visitors under 15: 40 % discount (school groups excluded).</li>
+                        <li> Students: 50 % discount upon presentation of your (international) student card or proof of enrolment.</li>
                     </ul>
 
                   </div>
 
+                </article>
+                  
+                  <section>
+                  <div class="container mt-4 ">
                   <div class="row">
                     <hr>
 
                   </div>
 
+                  <div class="row text-center mb-2">
+                    <h2>Choose Your Ticket</h2>
+                  </div>
+
+                  
+                 <form method="post" action="ticket-form.html"> 
                   <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch ">
+                      <div class="card" style="width: 18rem;">
                         <label>
-                            <input type="radio" name="test" value="small" checked>
-                            <img src="im28.jpg" alt="Option 1">
-                          </label>
+                          <input type="radio" name="Ticket" value="Standard Ticket"  required>
+                          <img class="card-img-top ela" src="Vatican-Museums-tickets-cost.jpg" alt="Card image cap">
+                        </label>
+                        <div class="card-body">
+                          <h5 class="card-title">Standard Ticket</h5>
+                          <p class="card-text">Vatican:Museums & Sistine Chapel Entrance ticket.</p>
+                          <p>Price:20€</p>
+                          <p> <a class="btn btn-primary">Read more...</a></p>
+
+                        </div>
+                      </div>
+                       
 
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                      <div class="card" style="width: 18rem;">
                         <label>
-                            <input type="radio" name="test" value="small" checked>
-                            <img src="im29.jpg" alt="Option 1">
-                          </label>
+                          <input type="radio" name="Ticket" value="Early Access Ticket" required>
+                          <img class="card-img-top ela" src="Vatican-Museums-tickets-cost.jpg" alt="Card image cap">
+                        </label>
+                        <div class="card-body">
+                          <h5 class="card-title">Early Access Ticket</h5>
+                          <p class="card-text">Early Vatican,Sistine Chapel & Basilica Guided Tour.</p>
+                          <p>Price:35€</p>
+                          <p> <a class="btn btn-primary">Read more...</a></p>
+
+                        </div>
+                      </div>
+                       
 
                     </div>
-                </div>
 
-                <div class="row">
+                
 
              
 
-                    <div class="col-md-3">
-                        <label>
-                            <input type="radio" name="test" value="small" checked>
-                            <img src="im10.JPG" alt="Option 1">
-                          </label>
+                  <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                    <div class="card" style="width: 18rem;">
+                      <label>
+                        <input type="radio" name="Ticket" value="Turn The lights On" required>
+                        <img class="card-img-top ela" src="Vatican-Museums-tickets-cost.jpg" alt="Card image cap" >
+                      </label>
+                      <div class="card-body">
+                        <h5 class="card-title">Turn The lights On</h5>
+                        <p class="card-text">Turning the lights on at the Vatican Museums.</p>
+                        <p>Price:45€</p>
+                        <p> <a class="btn btn-primary">Read more...</a></p>
 
+                      </div>
                     </div>
+                     
 
-                    <div class="col-md-3">
-                        <label>
-                            <input type="radio" name="test" value="small" checked>
-                            <img src="im5.JPG" alt="Option 1">
-                          </label>
+                  </div>
 
+                  <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                    <div class="card" style="width: 18rem;">
+                      <label>
+                        <input type="radio" name="Ticket" value="Skip-The-Ticket-Line-Tour" required>
+                        <img class="card-img-top ela" src="Vatican-Museums-tickets-cost.jpg" alt="Card image cap" >
+                        
+                      </label>
+
+                      <div class="card-body">
+                        <h5 class="card-title">Skip-The-Ticket-Line-Tour</h5>
+                        <p class="card-text">Vatican Museums & Sistine Chapel Skip-The-Ticket-Line-Tour.</p>
+                        <p>Price:60€</p>
+                        <p> <a class="btn btn-primary">Read more...</a></p>
+
+                      </div>
+                      
                     </div>
+                     
+
+                  </div>
                 </div>
 
-                     
-            </div>
-        
-                  
-                  
+                <div class="row mt-3">
+                  <div class="col-md-12 col-12  text-center">
+                    <a href="ticket-form.html" class="book"  id="ticket-btn"> <button type="submit" class="submit-button">Tickets <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
+                     <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                     <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
+                   </svg> </button>  </a> 
+
+             </div>
+                </div>
+              </form>
+              <div class="row mt-4">
+                <hr>
+
+              </div>
+              </div>
+
+             
+              </section>
+
+
+              <section>
+                <div class="container mt-4 ">
+                 
+
+                  <div class="row text-center mb-2" id="terms-id">
+                    <h2>Terms And Conditions</h2>
+                  </div>
+
                 
-      
-      
-              
-           
-              
-      
-         
 
-    </article>
-  
+                <div class="row">
+                  <ol>
+                    <li>Booking Confirmation: Your booking confirmation will be sent via email after you complete your booking process. It is your responsibility to check that all details in the confirmation email are correct. If there are any errors, please contact us immediately.</li>
+                    <li>Ticket Prices: The prices of Vatican Museum tickets are subject to change without prior notice.</li>
+                    <li>Entry Time: Your ticket indicates the date and entry time for the Vatican Museum. Please arrive at least 15 minutes before the entry time. Entry may be refused if you arrive after the entry time.</li>
+                    <li>Security Check: All visitors are required to go through a security check before entering the Vatican Museum. Large bags and backpacks are not allowed. Visitors must check their bags at the cloakroom before entering.</li>
+                    <li>No Refunds: Tickets are non-refundable and non-exchangeable.</li>
+                    <li>Changes to Booking: Any changes to your booking must be made at least 24 hours prior to the entry time. Changes are subject to availability.</li>
+                    <li>Force Majeure: We will not be liable for any delay, cancellation, or change to your booking due to circumstances beyond our control, such as strikes, natural disasters, or other events beyond our control.</li>
+                    <li>Liability: We will not be liable for any loss or damage to personal belongings, accidents, injuries, or other harm that may occur during your visit to the Vatican Museum.</li>
+                    <li>Governing Law: These terms and conditions are governed by the laws of Italy.</li>
+                  </ol>
+                  <p>By booking a ticket to the Vatican Museum, you agree to these terms and conditions.</p>
+                </div>
+              </div>
 
-    
-    
-        <footer>
-          
-            
-        </footer>
-    
+            </section>
+
+            <footer>
+
+              <nav class="bottom-navbar bg-dark ">
+                <div class="flex-container">
+                  <a href="Tickets and Prices.html" id="ticket-book" class="clr anchorDisabled">1. Tickets <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
+                      <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                      <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
+                    </svg></a>
+                  <a href="ticket-form.html" id="info-id" class="clr anchorDisabled" target="_self">2. Your Information <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
+                      <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"/>
+                      <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"/>
+                    </svg>  </a>
+                  <a href="card-info.html" id="pay-id" class="clr anchorDisabled extraPadding ">3. Payment <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                      <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                    </svg></a>
+      
+                  </div>
+                  </nav>
+            </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
    

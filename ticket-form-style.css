@@ -1,7 +1,8 @@
 body{
     font-size: 20px;
-    font-family: "Roboto,Open Sans,Arial,Helvetica,sans-serif";
-    background-color:#5b4e7e ;
+    font-family: "Raleway";
+    background-color:rgb(255, 255, 255) ;
+    scroll-behavior: smooth;
     
 }
 
@@ -21,7 +22,7 @@ h1{
 }
 
 h1 , .clr-d{
-    color: white;
+    color: black;
 }
 
 .top-navbar{
@@ -52,28 +53,13 @@ h1 , .clr-d{
 
 }
 
-.button-bottom
-{
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #000;
-        cursor: pointer;
-        font-weight: 300;
-        font-size: 12px;
-        text-decoration: none;
-        text-transform: uppercase;
-        border-radius: 30px;
-        width: auto;
-        max-width: 100%;
-        display: inline-block;
-        padding: 15px;
-        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
-        font-weight: bold;
 
-}
+
 
 .bottom-navbar a:hover:not(#pay-id, #info-id,#ticket-book),.top-navbar a:hover
 {
-    background-color: #433F5Fff;
+    background-color: #fb7d2e;
+    color: black;
     transition: 0.3s;
 }
 
@@ -188,8 +174,8 @@ footer
 hr{
 
     height: 4px;
-    background-color:white;
-    border: 2px solid white;
+    background-color:black;
+    border: 2px solid black;
 }
 
 .error{
@@ -206,7 +192,7 @@ hr{
 
 .container, .form-control input,label,.clr-tnt
 {
-    color: white;
+    color: black;
 }
 
 
@@ -229,8 +215,8 @@ hr{
 
 .submit-button
 {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
+    background-color: rgba(0, 0, 0);
+    color: #ffffff;
     cursor: pointer;
     font-weight: 300;
     font-size: 12px;
@@ -248,7 +234,22 @@ hr{
 
 .submit-button:hover
 {
-    background-color: black;
-    color: white;
+    background-color: #fb7d2e;
+    color: black;
     transition: 0.3s;
+}
+
+
+svg{
+    padding-bottom: 3px;
+  }
+
+  .extraPadding
+{
+    padding: 15px;
+}
+
+.anchorDisabled
+{
+    pointer-events: none;
 }
