@@ -1,8 +1,9 @@
 linkStyle();
+groupPeopleInput();
 confirmEmail();
 x=getCurrentDate();
 getCurrentTime(x);
-groupPeopleInput();
+
 
 function linkStyle()
 {
@@ -138,34 +139,35 @@ function groupPeopleInput()
   let emailName=document.getElementById("Email-id");
   let confEmailName=document.getElementById("Confirm-email");
   let checkbox=document.getElementById("defaultCheck1");
-  let ticketType=document.getElementById("ticket-type-Id");
+  const ticketType=document.getElementById("ticket-type-Id");
  
   peopleNumber.addEventListener("input",function()
   {
    
     let count=1;
    
-    let storedRadioValue=localStorage.getItem("radioValue");
-    let standardPrice=20;
-    let earlyAccesPrice=35;
-    let turnTheLightsPrice=45;
-    let skipTheLinePrice=60;
+    const storedRadioValue=localStorage.getItem("radioValue");
+    console.log(storedRadioValue);
+    const standardPrice=20;
+    const earlyAccesPrice=35;
+    const turnTheLightsPrice=45;
+    const skipTheLinePrice=60;
     
     form.addEventListener('submit', function(event) {
      
       //Standard Ticket
-      if(storedRadioValue==="Standard Ticket")
-      {
+    
         if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+standardPrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+"20"+"€");
         newName.classList.add("i");
-        total+=standardPrice;
+        
         
         nameContainer.append(newName);
+        count++;
         fName.value="";
         lName.value="";
         emailName.value="";
@@ -177,46 +179,41 @@ function groupPeopleInput()
 
        
         
-        count++;
+        
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€");
         newName.classList.add("i");
-        total+=(standardPrice-0.5*standardPrice);
+      
         
         nameContainer.append(newName);
         fName.value="";
         lName.value="";
         emailName.value="";
         confEmailName.value="";
-        Name.value="";
         checkbox.checked=false;
        
         
-        
-
-       
         
         count++;
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.4*standardPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.4*standardPrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
-        total+=(standardPrice-0.4*standardPrice);
         fName.value="";
         lName.value="";
         emailName.value="";
@@ -237,7 +234,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+standardPrice+"€";
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+standardPrice+"€";
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -247,7 +244,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(standardPrice-0.5*standardPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -257,27 +254,25 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (standardPrice-0.4*standardPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+"" + (standardPrice-0.4*standardPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
       }
 
         
-      }
-
       
 
       //Early Access Ticket
 
-      if(storedRadioValue==="Early Access Ticket")
+      else if(storedRadioValue==="Early Access Ticket")
       {
         if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+earlyAccesPrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+earlyAccesPrice+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -296,12 +291,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -321,12 +316,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.4*earlyAccesPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.4*earlyAccesPrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -350,7 +345,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+earlyAccesPrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+earlyAccesPrice+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -360,7 +355,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(earlyAccesPrice-0.5*earlyAccesPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -370,7 +365,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (earlyAccesPrice-0.4*earlyAccesPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+"" + (earlyAccesPrice-0.4*earlyAccesPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -381,14 +376,14 @@ function groupPeopleInput()
 
 
       //Turn The light On
-      if(storedRadioValue==="Turn The lights On")
+      else if(storedRadioValue==="Turn The lights On")
       {
         if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+turnTheLightsPrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+turnTheLightsPrice+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -407,12 +402,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -432,12 +427,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.4*turnTheLightsPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.4*turnTheLightsPrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -461,7 +456,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+turnTheLightsPrice+"€";
+        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+turnTheLightsPrice+"€";
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -471,7 +466,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(turnTheLightsPrice-0.5*turnTheLightsPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -481,7 +476,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (turnTheLightsPrice-0.4*turnTheLightsPrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+"" + (turnTheLightsPrice-0.4*turnTheLightsPrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -492,14 +487,14 @@ function groupPeopleInput()
       
       //Skip-The-Ticket-Line-Tour
 
-      if(storedRadioValue==="Skip-The-Ticket-Line-Tour")
+      else if(storedRadioValue==="Skip-The-Ticket-Line-Tour")
       {
         if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+skipTheLinePrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+skipTheLinePrice+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -518,12 +513,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -543,12 +538,12 @@ function groupPeopleInput()
        
       }
 
-      if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
+      else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Under 15")
       {
         event.preventDefault();
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.4*skipTheLinePrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.4*skipTheLinePrice)+"€");
         newName.classList.add("i");
         
         nameContainer.append(newName);
@@ -572,7 +567,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+ticketType.value+""+skipTheLinePrice+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+skipTheLinePrice+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -582,7 +577,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+" "+(skipTheLinePrice-0.5*skipTheLinePrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -592,7 +587,7 @@ function groupPeopleInput()
       {
         const nameContainer=document.getElementById("name-info");
         const newName=document.createElement("div");
-        newName.innerHTML=count +"."+" " +fName.value+" "+lName.value+"" + (skipTheLinePrice-0.4*skipTheLinePrice)+"€";
+        newName.innerHTML=(count +"."+" " +fName.value+" "+lName.value+"" + (skipTheLinePrice-0.4*skipTheLinePrice)+"€");
   
         newName.classList.add("i");
         nameContainer.append(newName);
@@ -603,13 +598,13 @@ function groupPeopleInput()
     
 
     })
-  
     
   
     })
-  }
   
+}
+
 
  
 
-
+  
