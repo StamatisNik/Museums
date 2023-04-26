@@ -91,9 +91,9 @@ function getCurrentDate()
 function getCurrentTime(dateToday)
 {
   const today = new Date();
-  for(let i=0; i<29; i++)
+  for(let i=1; i<4; i++)
   {
-    let cTime=document.querySelector("#time" +String(i));
+    let cTime=document.querySelector("#time-zone" +String(i));
     let time = today.getHours() + ":" + today.getMinutes();
     let cDate=document.getElementById("dateId");
     let time1=new Date('2020-01-01 ' + cTime.value);
@@ -103,6 +103,7 @@ function getCurrentTime(dateToday)
       if(time1.getTime()<time2.getTime() && cDate.value===dateToday)
       {
         cTime.setAttribute("disabled","");
+        
       }
       else if(cDate.value!==dateToday)
       {

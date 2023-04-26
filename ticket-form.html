@@ -12,7 +12,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous"/>
     <link rel="stylesheet" href="ticket-form-style.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="ticket-form-script.js" defer></script>
    
 </head>
@@ -21,7 +21,7 @@
         <nav class="top-navbar">
             
             <div class="header-item-1">
-                <a href="home.html" class="button-top" ><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <a href="home.html" class="button-top" ><svg class="arrow bi bi-arrow-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                     </svg>Home</a>
 
@@ -90,7 +90,7 @@
               </div>
 
          
-
+    
           <div class="form-group row ">
             <label for="First-name" class="col-md-5 col-form-label">First Name</label>
             <div class="col-md-7 mb-3">
@@ -389,8 +389,12 @@
                   <label for="timeId" class="col-md-5 col-form-label mt-3">Choose time</label>
                   <div class="col-md-7 ">
                     <select id="timeId" name="time-pick" class="form-control m-lg-3" required>
-                      <option id="none" hidden disabled selected value=""></option>
-                      <option id="time0" value="9:00">9:00</option>
+
+                      <option id="none" disabled selected value="">Choose a time zone</option>
+                      <option id="time-zone1" value="9:00">9:00-12:00</option>
+                      <option id="time-zone2" value="12:00">12:00-15:00</option>
+                      <option id="time-zone3" value="15:00">15:00-18:00</option>
+                      <!--<option id="time0" value="9:00">9:00</option>
                       <option id="time1" value="9:15">9:15</option>
                       <option id="time2" value="9:30"> 9:30</option>
                       <option id="time3" value="9:45">9:45</option>
@@ -418,7 +422,7 @@
                       <option id="time25" value="15:15">15:15</option>
                       <option id="time26" value="15:30">15:30</option>
                       <option id="time27" value="15:45">15:45</option>
-                      <option id="time28" value="16:00">16:00</option>
+                      <option id="time28" value="16:00">16:00</option>-->
                     </select>
                   </div>
                 </div>
@@ -428,7 +432,7 @@
                   <label for="timeId" class="col-md-5 col-form-label mt-3">Ticket type</label>
                   <div class="col-md-7 mb-3">
                     <select id="ticket-type-Id" name="ticketType" class="form-control m-lg-3" required>
-                      <option id="none" hidden disabled selected value=""></option>
+                      <option id="none-ticket" hidden disabled selected value=""></option>
                       <option id="adult-ticket" value="Adult Ticket">Adult</option>
                       <option id="student-ticket" value="Student Ticket">Student</option>
                       <option id="child-ticket" value="Under 15">Under 15</option>    
@@ -440,7 +444,7 @@
                  <div class="row m-lg-3">
 
                   <div class="col-md-9 ">
-                    <input class="form-check-input " type="checkbox"id="defaultCheck1" required>
+                    <input class="form-check-input " type="checkbox" id="defaultCheck1" required>
                     <label class="form-check-label " for="defaultCheck1">
                       I accept the <a href="Tickets and Prices.html#terms-id" class="clr-tnt" id="terms-info-Id" target="_blank"> Terms and Conditions</a>
                     </label>
@@ -468,7 +472,7 @@
                 <p>Your order will be processed and your tickets emailed to you as soon as possible.</p>
               </div>
                     
-                </div>
+             
 
                 
                   
