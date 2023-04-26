@@ -1,0 +1,227 @@
+body
+{
+    scroll-behavior: smooth;
+    background-color: white;
+    font-family: "Raleway";
+}
+header{
+  
+    max-width: 100%;
+     
+}
+  
+
+article
+{
+    font-size: 32px;
+    
+    
+}
+
+
+
+
+.logo{
+    
+    width: 256px;
+    margin: 0 auto;
+  
+}
+
+.dropdown-menu{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+
+h1{
+    font-size: 7rem;
+    width: 100%;
+   
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    margin-left: 40px;
+}
+
+li{
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#read-more
+{
+cursor: pointer;
+}
+
+.display-none
+{
+    display: none;
+}
+
+.display-more
+{
+    display: block;
+}
+
+.read-more-anchor{
+    text-decoration: none;
+    color: black;
+}
+
+hr
+{
+    color: #303036;
+    height: 4px;
+    border: 3px solid #303036;
+}
+
+.submit-button
+{
+    background-color: #303036;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    padding: 15px;
+    font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+    font-weight: bold;
+    border: none;
+    margin-right: 10px;
+    width: 300px;
+    height: 50px;
+    
+}
+
+.book :hover
+{
+    cursor: pointer;
+    background-color: #fb7d2e;
+    color: black;
+    transition: 0.3s;
+
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+ 
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+
+  [type=radio]:checked + img {
+    outline: 3.5px solid #1190eb
+  }
+
+
+  section
+  {
+    font-size: 18px;
+  }
+
+  svg{
+    padding-bottom: 3px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .bottom-navbar
+{
+    position: fixed;
+    width: 100%;
+    max-width: 100%; 
+    bottom: 0;
+    font-size: 20px;
+    
+   
+}
+
+.flex-container
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 3px;
+}
+
+.bottom-navbar a
+{
+text-decoration: none;
+margin: auto auto;
+
+}
+
+.clr 
+{
+    color: grey;
+}
+
+.change-color{
+    color: white;
+    font-weight: bold;
+}
+
+.button-bottom
+{
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #000;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 30px;
+        width: auto;
+        max-width: 100%;
+        display: inline-block;
+        padding: 15px;
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+        font-weight: bold;
+       
+}
+
+.bottom-navbar a:hover:not(#pay-id, #info-id,#ticket-book),.top-navbar a:hover
+{
+    background-color: #433F5Fff;
+    transition: 0.3s;
+}
+
+footer
+{
+    width: 100%;
+    background-color:gainsboro;
+    height: 100%;
+    height: 100px;
+
+}
+
+.anchorDisabled
+{
+    pointer-events: none;
+}
+
+.extraPadding
+{
+    padding: 15px;
+}
