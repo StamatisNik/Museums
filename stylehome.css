@@ -50,7 +50,6 @@ article{
     max-width: 100%;
     display: inline-block;
     padding: 15px;
-    
     font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
     font-weight: bold;
     border: none;
@@ -79,18 +78,17 @@ article{
 {
     padding-top: 250px;
     padding-left: 30px;
-}
 
-.bnh2{
-    margin-top: 200px;
-    margin-left: 30px; 
 }
 
 .bnh
+
 {
     padding-top: 170px;
     padding-left: 9px;
+  
 }
+
 
 .effect{
     color: rgba(0, 0, 0, 0.875);
@@ -99,7 +97,7 @@ article{
 }
 
 .effect:hover{
-    font-size: larger;
+    
     color: darkslategray ;
     transition: 0.5s;
 }
@@ -107,9 +105,7 @@ article{
 .effect2 {
     color: rgba(0, 0, 0, 0.875);
     font-weight: bold;
-
 }
-
 
 svg{
     padding-bottom: 3px;
