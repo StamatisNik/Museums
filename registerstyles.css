@@ -1,0 +1,185 @@
+body {
+    font-family: helvetica, sans-serif;
+    font-size:130%;
+}
+body{
+    font-family: 'Raleway';
+}
+
+header{
+    max-width: 100%;
+}
+
+#logo{
+    width: 256px;
+    padding: 15px;
+   
+}
+
+.button-top
+{
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #000;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 30px;
+        width: auto;
+        max-width: 100%;
+        display: inline-block;
+        padding: 15px;
+        margin: 10px;
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+        font-weight: bold;
+}
+
+.button-top:hover
+{
+    background-color: #fb7d2e;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-expand-sm .col {
+    border-right: 1px solid #555;
+    padding: 10px;
+}
+  
+.col:last-child {
+    border-right: none;
+  }
+  
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.nav-link {
+    color: white !important;
+    font-size: 16px;
+  }
+  
+.nav-link.active {
+    font-weight: bold;
+  }
+input {
+    padding: 5px 5px 12px 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width:320px;
+    }
+
+label {
+    position: relative;
+    top:12px;
+    width:200px;
+    float: left;
+}
+
+label::after {
+    content: "*";
+    color: red;
+  }
+
+#wrapper {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.form-element {
+    margin-bottom: 15px;
+}
+
+
+#errorMessage {
+    margin-top: 5px;
+    color: red;
+    font-size: 90% !important;
+}
+
+#successMessage {
+    margin-top: 5px;
+    color: green;
+    font-size: 90% !important;
+    display:none;
+    
+}
+
+h1
+{
+    margin-left:  360px;
+}
+
+
+
+/*.submit-button
+{
+    background-color: rgba(0, 0, 0);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+    font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+    font-weight: bold;
+    border: none;
+}
+
+.submit-button:hover
+{
+    background-color: #fb7d2e;
+    color: black;
+    transition: 0.3s;
+}*/
+
+.smallSize
+{
+font-size: 10px;
+}
+
+.largeSize
+{
+font-size: 22px;
+}
+
+#correctSvg
+{
+    margin-top: 10px;
+    color: green;
+    width: 30px;
+    height: 30px;
+}
+
+#falseSvg
+{
+    margin-top: 10px;
+    color: red;
+    width: 20px;
+    height: 20px;
+}
+#correctSvg,
+#falseSvg {
+  vertical-align: middle;
+}
+
+
+#correctSvgContainer
+{
+    display: none;
+}
+
+#falseSvgContainer
+{
+    display: none;
+}
