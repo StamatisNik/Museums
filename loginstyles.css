@@ -4,8 +4,7 @@ body{
     background-color:rgb(255, 255, 255) ;
     scroll-behavior: smooth;
     background-color: #354649;
-    color:#E0E7E9;
-    overflow-x: hidden;
+    color:#000;
 }
 
 header{
@@ -75,21 +74,21 @@ input {
     width:320px;
     }
 
-label {
-    position: relative;
-    top:12px;
-    width:200px;
-    float: left;
-}
+    label {
+        position: relative;
+        top:12px;
+        width:200px;
+        float: left;
+    }
+    
 
-label::after {
-    content: "*";
-    color: red;
-  }
 
 #wrapper {
     width: 800px;
-    margin: -5px auto;
+    margin: 130px auto;
+    background-color: #E0E7E9;
+    border-radius: 20px;
+    max-width: 100%;
   
 }
 
@@ -124,19 +123,14 @@ label::after {
     
 }
 
-#form-container
-{
-    margin-left: 110px;
-    padding: 30px;
-    max-width: 100%;
-}
-
 h1
 {
-    margin-left:  240px;
+    margin-left:  220px;
+    max-width: 100%;
 }
 .form-control{
     border-radius: 20px;
+    width: 300px;
     border: 1px solid #D8D8D8;
     background: #f5f5f5;
     margin-top: 13px;
@@ -156,9 +150,11 @@ h1
     border-radius: 30px;
     width: auto;
     max-width: 100%;
+    width: 150px;
     display: inline-block;
     padding: 15px;
     margin-top: 10px;
+    margin-left: 200px;
     font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
     font-weight: bold;
     border: none;
@@ -174,13 +170,11 @@ h1
 .smallSize
 {
 font-size: 10px;
-
 }
 
 .largeSize
 {
 font-size: 22px;
-
 }
 
 #correctSvg
@@ -212,6 +206,19 @@ font-size: 22px;
     display: none;
 }
 
+#form-container
+{
+    margin-left: 110px;
+    padding: 30px;
+    max-width: 100%;
+}
+
+hr{
+    max-width: 100%;
+    margin-right: 100px;
+}
+
+
 @media (max-width: 768px) {
     body {
         font-size: 20px;
@@ -219,14 +226,7 @@ font-size: 22px;
         background-color:rgb(255, 255, 255) ;
         scroll-behavior: smooth;
         background-color: #354649;
-        color:#E0E7E9;
-        overflow-x: hidden;
-        
-        
-    }
-    .navbar{
-        max-width: 100%;
-
+        color:#000;
     }
   
     header{
@@ -288,25 +288,29 @@ font-size: 22px;
     .nav-link.active {
         font-weight: bold;
       }
-
-    input 
-    {
+    input {
         padding: 5px 5px 12px 5px;
         font-size: 25px;
         border-radius: 5px;
         border: 1px solid grey;
-        width:100px;
+        width:320px;
         }
     
+        label {
+            position: relative;
+            top:12px;
+            width:200px;
+            float: left;
+        }
+        
     
-    label::after {
-        content: "*";
-        color: red;
-      }
     
     #wrapper {
-        width: 500px;
-        margin: -5px auto;
+        width: 480px;
+        margin: 100px auto;
+        background-color: #E0E7E9;
+        border-radius: 20px;
+        max-width: 100%;
       
     }
     
@@ -343,16 +347,16 @@ font-size: 22px;
     
     h1
     {
-        margin-left:95px;
+        margin-left:  110px;
         max-width: 100%;
     }
     .form-control{
         border-radius: 20px;
+        width: 300px;
         border: 1px solid #D8D8D8;
         background: #f5f5f5;
         margin-top: 13px;
         padding: 6px 15px;
-        width: 300px;
     }
     
     
@@ -368,9 +372,11 @@ font-size: 22px;
         border-radius: 30px;
         width: auto;
         max-width: 100%;
+        width: 150px;
         display: inline-block;
         padding: 15px;
         margin-top: 10px;
+        margin-left: 60px;
         font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
         font-weight: bold;
         border: none;
@@ -386,13 +392,11 @@ font-size: 22px;
     .smallSize
     {
     font-size: 10px;
-    
     }
     
     .largeSize
     {
     font-size: 22px;
-   
     }
     
     #correctSvg
@@ -423,7 +427,7 @@ font-size: 22px;
     {
         display: none;
     }
-
+    
     #form-container
     {
         margin-left: 50px;
@@ -431,15 +435,10 @@ font-size: 22px;
         max-width: 100%;
     }
 
-    hr{
-        margin-right: 0;
-        width: 300px;
-    }
-
-    .cols{
-        width: 310px;
-    }
-
     
+hr{
+    margin-right: 0;
+    width: 300px;
+}
     
   }

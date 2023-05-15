@@ -154,17 +154,20 @@ footer
 
 }
 
-.map{
+.map
+{
     color: rgb(203, 7, 7);
     text-decoration: none;
 
 }
-.b{
+.b
+{
     font-weight: bold;
     color: #000;
 }
 
-.i{
+.i
+{
     font-style: italic;
     color: black;
 }
@@ -212,6 +215,13 @@ hr{
     font-weight: bold;
 }
 
+.namecont
+{
+    font-weight: bold;
+    margin-top: 16px;
+
+}
+
 .submit-button
 {
     background-color: rgba(0, 0, 0);
@@ -229,6 +239,7 @@ hr{
     font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
     font-weight: bold;
     border: none;
+    margin-top: -5px;
 }
 
 .submit-button:hover

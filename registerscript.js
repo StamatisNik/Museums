@@ -5,6 +5,9 @@ let passwordInp=document.getElementById("password");
 let passwordConfInp=document.getElementById("passwordConfirm");
 let dateInp=document.getElementById("DOB-id");
 let submitBtn=document.getElementById("submitButton");
+let success=document.getElementById("successMessage");
+let error=document.getElementById("errorMessage");
+
 const emailContainer=document.querySelector("#email-container");
 const confEmailContainer=document.querySelector("#confemail-container");
 const passwordContainer=document.querySelector("#pass-container");
@@ -12,253 +15,281 @@ const confPassContainer=document.querySelector("#passconf-container");
 const dobContainer=document.querySelector("#dob-container");
 const correctIcon=document.querySelector("#correctSvgContainer");
 const falseIcon=document.querySelector("#falseSvgContainer");
-let success=document.getElementById("successMessage");
-    let error=document.getElementById("errorMessage");
+const passError=document.querySelector("#passerrorMessage");
+
+const falseIconCloneDob=falseIcon.cloneNode(true);
+const falseIconCloneConfEmail=falseIcon.cloneNode(true);
+const falseIconClonePass=falseIcon.cloneNode(true);
+const falseIconCloneConfPass=falseIcon.cloneNode(true);
+
+const correctIconCloneDob=correctIcon.cloneNode(true);
+const correctIconCloneConfEmail=correctIcon.cloneNode(true);
+const correctIconClonePass=correctIcon.cloneNode(true);
+const correctIconCloneConfPass=correctIcon.cloneNode(true);
+
+const emailRegex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+const passwordRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+=_])[A-Za-z\d@$!%*#?&+=_]{8,}$/
 
 
-isEmail(emailInp,confEmailInp,dateInp,passwordInp,passwordConfInp,submitBtn);
+
+Validation(emailInp,confEmailInp,dateInp,passwordInp,passwordConfInp,submitBtn);
 
 
-function isEmail(email,confEmail,date,password,passwordConfirm,submit) {
-  let success=document.getElementById("successMessage");
-    let error=document.getElementById("errorMessage");
-    const emailRegex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
-    const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
-    const passwordRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+=_])[A-Za-z\d@$!%*#?&+=_]{8,}$/
-    
 
-   
-  //αν το πεδίο email, έχει μορφή email
-  
-    email.addEventListener("input",function()
-    {
-        if(email.value.match(emailRegex))
-  { 
-    email.setAttribute("id","successMessage");
-    email.style.display="block";
-    /*success.style.display="block";
-    error.style.display = "none";
-    success.innerHTML="Έγκυρο email";*/
-    falseIcon.style.display = "none";
-    emailContainer.append(correctIcon);
-    correctIcon.style.display = "block";
-    
-  }
 
-  else
-  {
-    email.setAttribute("id","errorMessage");
-    /*success.style.display="none";
-    error.style.display = "block";
-    error.innerHTML="Μή έγκυρο email!";*/
-    correctIcon.style.display = "none";
-    emailContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    
-    submit.disabled=true;
-    
-  }
-        
-    })
-
+function Validation(email,confEmail,date,password,passwordConfirm,submit) {
     
    
- 
-
-
-
-  // αν στο τηλέφωνο υπάρχουν μόνο αριθμοί,
-
-
-    date.addEventListener("input",function()
-    {
-        if(date.value.match(dateRegex))
-  {
-    date.setAttribute("id","successMessage");
-    date.style.display="block";
-    /*error.style.display = "none";
-    success.style.display="block";
-    success.innerHTML="Έγκυρο τηλέφωνο";*/
-    dobContainer.append(correctIcon);
-    correctIcon.style.display = "block";
-    falseIcon.style.display = "none";
-    submit.disabled="false";
-    
-  }
-
-  else
-  {
-    date.setAttribute("id","errorMessage");
-    /*success.style.display="none";
-    error.style.display = "block";
-    error.innerHTML="Μή έγκυρο τηλέφωνο!";*/
-    submit.disabled=true;
-    correctIcon.style.display = "none";
-    dobContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    
-  }
-        
-    })
-
-
-  // αν ο κωδικός και επιβεβαίωση να είναι ίδιοι
   
+  
+  email.addEventListener("input", function() {
+    if (email.value === "" ) {
+      correctIcon.style.display = "none";
+      falseIcon.style.display = "none";
+      email.removeAttribute("id");
+      confEmail.removeAttribute("id");
+      return;
+    }
+
+    
+  
+    else if (!email.value.match(emailRegex)) {
+      email.setAttribute("id", "errorMessage");
+      correctIcon.style.display = "none";
+      emailContainer.append(falseIcon);
+      falseIcon.style.display = "block";
+     
+      
+    }  
+    else 
+    {
+      email.setAttribute("id", "successMessage");
+      email.style.display = "block";
+      falseIcon.style.display = "none";
+      emailContainer.append(correctIcon);
+      correctIcon.style.display = "block";
+      
+      
+    }
+  });
+
+   email.addEventListener("input",()=>
+   {
+    if(email.value !== confEmail.value && confEmail.value!=="" )
+    {
+      confEmail.setAttribute("id", "errorMessage");
+      
+      confEmailContainer.append(falseIconCloneConfEmail);
+      correctIconCloneConfEmail.style.display="none";
+      falseIconCloneConfEmail.style.display = "block";
+      
+      
+
+    }
+
+    else if(email.value === confEmail.value && email.value.match(emailRegex) )
+    {
+      confEmail.setAttribute("id", "successMessage");
+      confEmail.style.display="block";      
+      correctIconCloneConfEmail.style.display = "block";
+      confEmailContainer.append(correctIconCloneConfEmail);
+      falseIconCloneConfEmail.style.display = "none";
+      
+
+    }
+
+   })
+
+
+  confEmail.addEventListener("input", function() {
+    if (confEmail.value === "") {
+      correctIconCloneConfEmail.style.display = "none";
+      falseIconCloneConfEmail.style.display = "none";
+      confEmail.removeAttribute("id","errorMessage");
+      return;
+    }
+     else if(confEmail.value===email.value && email.value.match(emailRegex))
+    {
+      confEmail.setAttribute("id", "successMessage");
+      confEmail.style.display="block";
+      correctIconCloneConfEmail.style.display = "block";
+      confEmailContainer.append(correctIconCloneConfEmail);
+      falseIconCloneConfEmail.style.display = "none";
+      
+
+    }
+
+    else if(confEmail.value!==email.value)
+    {
+      confEmail.setAttribute("id", "errorMessage");
+      correctIconCloneConfEmail.style.display = "none";
+      confEmailContainer.append(falseIconCloneConfEmail);
+      falseIconCloneConfEmail.style.display = "block";
+      
+      
+
+    }
+  });
+    
 
   password.addEventListener("input",function()
     {
-        if(password.value.match(passwordRegex))
-        
-        
-        
+
+      if (password.value === "") {
+        correctIconClonePass.style.display = "none";
+        falseIconClonePass.style.display = "none";
+        password.removeAttribute("id","errorMessage");
+        passError.classList.remove("show");
+        return;
+      }
+      
+       else if(password.value.match(passwordRegex))
   {
     success.style.display="block";
-    error.style.display = "none";
-   
-
-   
-        if(password.value!==passwordConfirm.value)
-        {
-            
-           /* success.style.display="block";
-            success.innerHTML="Έγκυρος κωδικός";
-            error.style.display = "block";
-            
-            error.innerHTML="Οι κωδικοί δεν ταιριάζουν!";*/
-            passwordContainer.append(correctIcon);
-            correctIcon.style.display = "block";
-            falseIcon.style.display = "none";
-            submit.disabled=true;
-            passwordConfirm.disabled=false;
-
-        }
+    passError.classList.remove("show");
+    correctIconClonePass.style.display = "block";
+    passwordContainer.append(correctIconClonePass);
+    falseIconClonePass.style.display = "none";
+    
   
   }
+
+  
 
   else
   {
     success.style.display="none";
-    error.style.display = "block";
-    error.innerHTML="Ο κωδικός πρέπει να περιλαμβάνει τουλάχιστον ένα γράμμα, χαρακτήρα, σύμβολο και να έχει τουλάχιστον 8 χαρακτήρες!";
-    correctIcon.style.display = "none";
-    passwordContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    passwordConfirm.disabled=true;
-    submit.disabled=true;
+    passError.style.display = "block";
+    passError.classList.add("show");
+    passError.innerHTML="Password must contain at least one number,letter,symbol and have at least 8 characters! ";
+    correctIconClonePass.style.display = "none";
+    passwordContainer.append(falseIconClonePass);
+    falseIconClonePass.style.display = "block";
+    
+    
   }
         
     })
+
+
+    password.addEventListener("input",()=>
+   {
+    if(password.value !== passwordConfirm.value && passwordConfirm.value!=="" )
+    {
+      confPassContainer.append(falseIconCloneConfPass);
+      correctIconCloneConfPass.style.display="none";
+      falseIconCloneConfPass.style.display = "block";
+      
+      
+
+    }
+
+    else if(password.value === passwordConfirm.value && password.value.match(passwordRegex) )
+    {
+           
+      correctIconCloneConfPass.style.display = "block";
+      confPassContainer.append(correctIconCloneConfPass);
+      falseIconCloneConfPass.style.display = "none";
+      
+
+    }
+
+   })
 
 
 
 
     passwordConfirm.addEventListener("input",function()
     {
-        if(passwordConfirm.value!==password.value)
+
+      if (passwordConfirm.value === "") {
+        correctIconCloneConfPass.style.display = "none";
+        falseIconCloneConfPass.style.display = "none";
+        passwordConfirm.removeAttribute("id","errorMessage");
+        passError.classList.remove("show");
+        return;
+      }
+  
+      else  if(passwordConfirm.value===password.value && password.value.match(passwordRegex))
   {
-    success.style.display="none";
-    //error.style.display = "block";
-    correctIcon.style.display = "none";
-    confPassContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    //error.innerHTML="Οι κωδικοί δεν ταιριάζουν!";
-    submit.disabled=true;
+    success.style.display="block";
+    correctIconCloneConfPass.style.display = "block";
+    confPassContainer.append(correctIconCloneConfPass);
+    falseIconCloneConfPass.style.display = "none";
+    
     
  
   }
 
-  else 
+  else if(passwordConfirm.value!==password.value )
   {
-    error.style.display = "none";
-   // success.style.display="block";
-    confPassContainer.append(correctIcon);
-    correctIcon.style.display = "block";
-    falseIcon.style.display = "none";
-    //success.innerHTML="Οι κωδικοί ταιριάζουν"; 
-    submit.disabled=false;
+    confPassContainer.append(falseIconCloneConfPass);
+    correctIconCloneConfPass.style.display = "none";
+    falseIconCloneConfPass.style.display = "block";
+   
+    
+    
     
     
   }
         
     })
 
-   /* email.addEventListener("input",function()
+
+    date.addEventListener("input",function()
     {
-        if(email.value!==confEmail.value)
+
+      if (date.value === "") {
+        correctIconCloneDob.style.display = "none";
+        falseIconCloneDob.style.display = "none";
+        date.removeAttribute("id","errorMessage");
+        return;
+      }
+       else if(date.value.match(dateRegex))
   {
-    confEmail.setAttribute("id","errorMessage");
-    email.style.display="block";
-    success.style.display="none";
-    //error.style.display = "block";
-    correctIcon.style.display = "none";
-    emailContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    //error.innerHTML="Οι κωδικοί δεν ταιριάζουν!";
-    submit.disabled=true;
+    date.setAttribute("id","successMessage");
+    date.style.display="block";
+    dobContainer.append(correctIconCloneDob);
+    correctIconCloneDob.style.display = "block";
+    falseIconCloneDob.style.display = "none";
     
- 
+    
   }
 
-  else 
+  else
   {
-    email.setAttribute("id","successMessage");
-    error.style.display = "none";
-   // success.style.display="block";
-    emailContainer.append(correctIcon);
-    correctIcon.style.display = "block";
-    falseIcon.style.display = "none";
-    //success.innerHTML="Οι κωδικοί ταιριάζουν"; 
-    submit.disabled=false;
-    
+    date.setAttribute("id","errorMessage");
+    ;
+    correctIconCloneDob.style.display = "none";
+    dobContainer.append(falseIconCloneDob);
+    falseIconCloneDob.style.display = "block";
     
   }
         
-    })*/
+    })
 
-
- /* confEmail.addEventListener("input",function()
-    {
-        if(confEmail.value!==email.value)
-  {
-    confEmail.setAttribute("id","errorMessage");
-    confEmail.style.display="block";
-    success.style.display="none";
-    //error.style.display = "block";
-    correctIcon.style.display = "none";
-    confEmailContainer.append(falseIcon);
-    falseIcon.style.display = "block";
-    //error.innerHTML="Οι κωδικοί δεν ταιριάζουν!";
-    submit.disabled=true;
-    
- 
-  }
-
-  else 
-  {
-    confEmail.setAttribute("id","successMessage");
-    error.style.display = "none";
-   // success.style.display="block";
-    confEmailContainer.append(correctIcon);
-    correctIcon.style.display = "block";
-    falseIcon.style.display = "none";
-    //success.innerHTML="Οι κωδικοί ταιριάζουν"; 
-    submit.disabled=false;
-    
-    
-  }
-        
-    })*/
-
-
-    
-  
-  // να δώσετε κατάλληλο μήνυμα στην αρχή της σελίδας
-  
-
- 
-
-
-
+    checkValidation(email,confEmail,date,password,passwordConfirm,submit);
 };
 
 
+
+function checkValidation(email,confEmail,date,password,passwordConfirm,submit) {
+  let list=[email,confEmail,date,password,passwordConfirm];
+  list.forEach(item=>{
+    item.addEventListener("blur",function()
+    {
+      if (email.value.match(emailRegex) && confEmail.value === email.value && email.value.match(emailRegex) &&  password.value.match(passwordRegex) && passwordConfirm.value === password.value && password.value.match(passwordRegex) && date.value.match(dateRegex)) {
+        submit.disabled = false;
+        console.log("ara");
+      } else {
+        console.log("sayon");
+        submit.disabled = true;
+      }
+
+    })
+    
+  })
+
+  
+}
