@@ -1,0 +1,27 @@
+body{
+    font-family: 'Raleway';
+}
+
+header{
+    max-width: 100%;
+}
+
+.card-img-top{
+    width: 256px;
+    padding: 15px;
+    margin: 10px;
+}
+
+#carouselwithCaptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    max-height: 550px;
+    margin: 0 auto;
+  }
+ 
+.dec{
+    text-decoration: none;
+    color: white;
+}

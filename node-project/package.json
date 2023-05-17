@@ -1,0 +1,17 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "nodemon app.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^7.0.7",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {},
+  "description": ""
+}
