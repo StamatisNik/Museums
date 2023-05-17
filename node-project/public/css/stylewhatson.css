@@ -1,0 +1,95 @@
+body{
+    font-family: 'Raleway';
+}
+
+header{
+    max-width: 100%;
+}
+
+.dropdown-menu{
+  width: 200px;
+  height: 150px;
+  padding: 30px;
+}
+
+.custom-dropdown-menu {
+  width: 90px;
+  height: 170px;
+}
+
+.userpic{
+  height: 30x;
+  width: 30px;
+}
+
+
+.userpic2{
+  height: 50x;
+  width: 50px;
+}
+.form-control{
+  width: 5;
+  height: 5;
+}
+
+.logout{
+  width: 17px;
+  height: 17px;
+  margin-left: 28px;
+}
+
+.form-control{
+    width: 5;
+    height: 5;
+}
+
+#logo{
+    width: 256px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.card-img-top{
+    width: 256px;
+    padding: 15px;
+    margin: 10px;
+}
+
+#carouselwithCaptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    max-height: 550px;
+    margin: 0 auto;
+  }
+ 
+.dec{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-expand-sm .col {
+    border-right: 1px solid #555;
+    padding: 10px;
+  }
+  
+
+  .col:last-child {
+    border-right: none;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .nav-link {
+    color: white !important;
+    font-size: 16px;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
