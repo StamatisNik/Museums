@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- na kleinw to select-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Form</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"/>
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="ticket-form-style.css">
+    <script src="/ticket-form-script.js" defer></script>
+   
+</head>
+<body>
+    <header>
+        <nav class="top-navbar">
+            
+            <div class="header-item-1">
+                <a href="home.html" class="button-top" ><svg class="arrow bi bi-arrow-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>Home</a>
+
+            </div>
+            
+            <div class="header-item-2">
+            <img class="logo" src="museum-logo.png" alt="Vatican Museum logo" title="MVSEI  VATICANI">
+
+            </div>
+            
+
+           
+           
+                </nav>
+                </header>
+
+    <div class="container">
+        <div class="row mt-5 mx-5 text-center">
+            <h1>Book your tickets</h1>
+
+        </div>
+        
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-12 col-md-10 col-lg-6">
+
+          <form method="post" action="#" id="ticket-form"> <!-- form-->
+            <div class="row">
+              <div class="col-md-12 ">
+                <hr class="w-100 ">
+               
+              </div>
+              
+                </div>
+
+            
+            
+            <div class="row ">
+            <label for="people-group-id" class="col-md-9 col-form-label ">How many people are in your group? </label>
+            <div class="col-md-3">
+
+              <select class="select-group" id="people-group-id" name="people-group" required>
+                <option  hidden disabled selected value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              
+            </div>
+
+            
+            
+          </div>
+          
+          
+
+          <div class="row mb-5">
+            <div class="col-md-12">
+              <hr class="w-100 ">
+            </div>
+              </div>
+
+              <div class="form-group row">
+                
+
+                <div class="form-group row" >
+                  <label for="dateId" class="col-md-5 col-form-label mt-3">Pick a date</label>
+                  <div class="col-md-7">
+                    <input type="date" class="form-control m-lg-3" id="dateId">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="timeId" class="col-md-5 col-form-label mt-3">Choose time</label>
+                  <div class="col-md-7 ">
+                    <select id="timeId" name="time-pick" class="form-control m-lg-3" required>
+
+                      <option id="none" disabled selected value="">Choose a time zone</option>
+                      <option id="time-zone1" value="9:00">9:00-12:00</option>
+                      <option id="time-zone2" value="12:00">12:00-15:00</option>
+                      <option id="time-zone3" value="15:00">15:00-18:00</option>
+                      <!--<option id="time0" value="9:00">9:00</option>
+                      <option id="time1" value="9:15">9:15</option>
+                      <option id="time2" value="9:30"> 9:30</option>
+                      <option id="time3" value="9:45">9:45</option>
+                      <option id="time4" value="10:00">10:00</option>
+                      <option id="time5" value="10:15">10:15</option>
+                      <option id="time6" value="10:30">10:30</option>
+                      <option id="time7" value="10:45">10:45</option>
+                      <option id="time8" value="11:00">11:00</option>
+                      <option id="time9" value="11:15">11:15</option>
+                      <option id="time10" value="11:30">11:30</option>
+                      <option id="time11" value="11:45">11:45</option>
+                      <option id="time12" value="12:00">12:00</option>
+                      <option id="time13" value="12:15">12:15</option>
+                      <option id="time14" value="12:30">12:30</option>
+                      <option id="time15" value="12:45">12:45</option>
+                      <option id="time16" value="13:00">13:00</option>
+                      <option id="time17" value="13:15">13:15</option>
+                      <option id="time18" value="13:30">13:30</option>
+                      <option id="time19" value="13:45">13:45</option>
+                      <option id="time20"value="14:00">14:00</option>
+                      <option id="time21"value="14:15">14:15</option>
+                      <option id="time22"value="14:30">14:30</option>
+                      <option id="time23"value="14:45">14:45</option>
+                      <option id="time24" value="15:00">15:00</option>
+                      <option id="time25" value="15:15">15:15</option>
+                      <option id="time26" value="15:30">15:30</option>
+                      <option id="time27" value="15:45">15:45</option>
+                      <option id="time28" value="16:00">16:00</option>-->
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label for="timeId" class="col-md-5 col-form-label mt-3">Ticket type</label>
+                  <div class="col-md-7 mb-3">
+                    <select id="ticket-type-Id" name="ticketType" class="form-control m-lg-3" required>
+                      <option id="none-ticket" hidden disabled selected value=""></option>
+                      <option id="adult-ticket" value="Adult Ticket">Adult</option>
+                      <option id="student-ticket" value="Student Ticket">Student</option>
+                      <option id="child-ticket" value="Under 15">Under 15</option>    
+                    </select>
+                    
+                  </div>
+                </div>
+
+                 <div class="row m-lg-3">
+
+                  <div class="col-md-9 ">
+                    <input class="form-check-input " type="checkbox" id="defaultCheck1" required>
+                    <label class="form-check-label " for="defaultCheck1">
+                      I accept the <a href="Tickets and Prices.html#terms-id" class="clr-tnt" id="terms-info-Id" target="_blank"> Terms and Conditions</a>
+                    </label>
+
+                  </div>
+
+                  <div class="col-md-3">
+                     <button class="submit-button" type="submit">Submit<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg> </button> 
+        
+                    </div>
+                    
+                  </div>
+                   
+
+                    
+
+              </div>
+
+               
+
+              
+              <div class="row m-lg-0 mt-3 clr-d">
+                <p>Your order will be processed and your tickets emailed to you as soon as possible.</p>
+              </div>
+                    
+             
+
+                
+              
+          </form>
+
+
+        </div>
+      </div>
+        
+
+    </div>
+
+    
+    
+        <footer>
+          
+            <nav class="bottom-navbar bg-dark">
+              <div class="flex-container">
+                <a href="Tickets and Prices.html" id="ticket-book" class="clr anchorDisabled">1. Tickets <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
+                    <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                    <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
+                  </svg></a>
+                <a href="ticket-form.html" id="info-id" class="clr anchorDisabled" target="_self">2. Your Information <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
+                    <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"/>
+                    <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"/>
+                  </svg>  </a>
+                <a href="card-info.html" id="pay-id" class="clr extraPadding anchorDisabled">3. Payment <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                  </svg></a>
+                
+    
+                </div>
+                </nav>
+
+                <div class="container mt-1">
+                  <div class="row">
+                    <div class="col-md-4 col-6">
+                      <div class="row-md pt-3">
+                        <p class="b">Information:</p>
+                      </div>
+                
+                      <div class="row-md mb-1">
+                        <p class="i"> Vatican Museum <a href="https://www.google.com/maps/d/viewer?hl=en&mid=1KGmLWr2qy5HWj_53I4NoBLFneyE&ll=41.90675000000004%2C12.453394999999995&z=17" target="_blank" class="map"> Map</a>  </p>
+                      </div>
+                
+                      <div class="row-md mb-1">
+                        <p class="i">
+                          Piazza della Citta Leonina, Rome
+                        </p>
+                      </div>
+                
+                      <div class="row-md mb-1">
+                        <p class="i">00120, Vatican City</p> 
+                      </div>
+                
+                      <div class="row-md mb-1">
+                        <p class="i">
+                          Phone:+39 06 6988 4676
+                        </p>    
+                      </div>
+                
+                      <div class="row-md mb-1">
+                        <p class="i">
+                          Email: info@thevaticanmuseums.com
+                        </p>
+                      </div>
+                    </div>
+                
+                    <div class="col-md-4 col-6" id="name-info">
+                      <div class="row-md pt-3">
+                        <p class="b i">Tickets:</p>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                </div>
+               
+            
+        </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   
+  </body>
+
+  </html>

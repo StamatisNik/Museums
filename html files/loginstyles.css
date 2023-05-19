@@ -1,0 +1,444 @@
+body{
+    font-size: 20px;
+    font-family: "Raleway";
+    background-color:rgb(255, 255, 255) ;
+    scroll-behavior: smooth;
+    background-color: #354649;
+    color:#000;
+}
+
+header{
+    max-width: 100%;
+}
+
+#logo{
+    width: 256px;
+    padding: 15px;
+   
+}
+
+.button-top
+{
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #000;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 30px;
+        width: auto;
+        max-width: 100%;
+        display: inline-block;
+        padding: 15px;
+        margin: 10px;
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+        font-weight: bold;
+}
+
+.button-top:hover
+{
+    background-color:#fb7d2e;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-expand-sm .col {
+    border-right: 1px solid #555;
+    padding: 10px;
+}
+  
+.col:last-child {
+    border-right: none;
+  }
+  
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.nav-link {
+    color: white !important;
+    font-size: 16px;
+  }
+  
+.nav-link.active {
+    font-weight: bold;
+  }
+input {
+    padding: 5px 5px 12px 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width:320px;
+    }
+
+    label {
+        position: relative;
+        top:12px;
+        width:200px;
+        float: left;
+    }
+    
+
+
+#wrapper {
+    width: 800px;
+    margin: 130px auto;
+    background-color: #E0E7E9;
+    border-radius: 20px;
+    max-width: 100%;
+  
+}
+
+.form-element {
+    margin-bottom: 15px;
+}
+
+
+#errorMessage {
+    color: red;
+    font-size: 90% !important;
+}
+
+
+
+#passerrorMessage {
+    color: red;
+    font-size: 90% !important;
+    transition: opacity 0.4s ease;
+    opacity: 0; 
+}
+
+#passerrorMessage.show {
+    opacity: 1; 
+}
+
+#successMessage {
+    
+    color: green;
+    font-size: 90% !important;
+    display:none;
+    
+}
+
+h1
+{
+    margin-left:  220px;
+    max-width: 100%;
+}
+.form-control{
+    border-radius: 20px;
+    width: 300px;
+    border: 1px solid #D8D8D8;
+    background: #f5f5f5;
+    margin-top: 13px;
+    padding: 6px 15px;
+}
+
+
+.submit-button
+{
+    background-color: rgba(0, 0, 0);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    width: 150px;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 200px;
+    font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+    font-weight: bold;
+    border: none;
+}
+
+.submit-button:hover
+{
+    background-color: #A3C6C4;
+    color: black;
+    transition: 0.3s;
+}*/
+
+.smallSize
+{
+font-size: 10px;
+}
+
+.largeSize
+{
+font-size: 22px;
+}
+
+#correctSvg
+{
+    margin-top: 10px;
+    color: green;
+    width: 35px;
+    height: 35px;
+}
+
+#falseSvg
+{
+    margin-left: 8px;
+    margin-top: 21px;
+    color: red;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#correctSvgContainer
+{
+    display: none;
+}
+
+#falseSvgContainer
+{
+    display: none;
+}
+
+#form-container
+{
+    margin-left: 110px;
+    padding: 30px;
+    max-width: 100%;
+}
+
+hr{
+    max-width: 100%;
+    margin-right: 100px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px;
+        font-family: "Raleway";
+        background-color:rgb(255, 255, 255) ;
+        scroll-behavior: smooth;
+        background-color: #354649;
+        color:#000;
+    }
+  
+    header{
+        max-width: 100%;
+    }
+    
+    #logo{
+        width: 256px;
+        padding: 15px;
+       
+    }
+    
+    .button-top
+    {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 30px;
+            width: auto;
+            max-width: 100%;
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+            font-weight: bold;
+    }
+    
+    .button-top:hover
+    {
+        background-color:#fb7d2e;
+        color: black;
+        transition: 0.3s;
+    }
+    
+    .navbar-expand-sm .col {
+        border-right: 1px solid #555;
+        padding: 10px;
+    }
+      
+    .col:last-child {
+        border-right: none;
+      }
+      
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+    .nav-link {
+        color: white !important;
+        font-size: 16px;
+      }
+      
+    .nav-link.active {
+        font-weight: bold;
+      }
+    input {
+        padding: 5px 5px 12px 5px;
+        font-size: 25px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        width:320px;
+        }
+    
+        label {
+            position: relative;
+            top:12px;
+            width:200px;
+            float: left;
+        }
+        
+    
+    
+    #wrapper {
+        width: 480px;
+        margin: 100px auto;
+        background-color: #E0E7E9;
+        border-radius: 20px;
+        max-width: 100%;
+      
+    }
+    
+    .form-element {
+        margin-bottom: 15px;
+    }
+    
+    
+    #errorMessage {
+        color: red;
+        font-size: 90% !important;
+    }
+    
+    
+    
+    #passerrorMessage {
+        color: red;
+        font-size: 90% !important;
+        transition: opacity 0.4s ease;
+        opacity: 0; 
+    }
+    
+    #passerrorMessage.show {
+        opacity: 1; 
+    }
+    
+    #successMessage {
+        
+        color: green;
+        font-size: 90% !important;
+        display:none;
+        
+    }
+    
+    h1
+    {
+        margin-left:  110px;
+        max-width: 100%;
+    }
+    .form-control{
+        border-radius: 20px;
+        width: 300px;
+        border: 1px solid #D8D8D8;
+        background: #f5f5f5;
+        margin-top: 13px;
+        padding: 6px 15px;
+    }
+    
+    
+    .submit-button
+    {
+        background-color: rgba(0, 0, 0);
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 30px;
+        width: auto;
+        max-width: 100%;
+        width: 150px;
+        display: inline-block;
+        padding: 15px;
+        margin-top: 10px;
+        margin-left: 60px;
+        font-family:"Roboto,Open Sans,Arial,Helvetica,sans-serif";
+        font-weight: bold;
+        border: none;
+    }
+    
+    .submit-button:hover
+    {
+        background-color: #A3C6C4;
+        color: black;
+        transition: 0.3s;
+    }*/
+    
+    .smallSize
+    {
+    font-size: 10px;
+    }
+    
+    .largeSize
+    {
+    font-size: 22px;
+    }
+    
+    #correctSvg
+    {
+        margin-top: 10px;
+        color: green;
+        width: 35px;
+        height: 35px;
+    }
+    
+    #falseSvg
+    {
+        margin-left: 8px;
+        margin-top: 21px;
+        color: red;
+        width: 20px;
+        height: 20px;
+    }
+    
+    
+    
+    #correctSvgContainer
+    {
+        display: none;
+    }
+    
+    #falseSvgContainer
+    {
+        display: none;
+    }
+    
+    #form-container
+    {
+        margin-left: 50px;
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    
+hr{
+    margin-right: 0;
+    width: 300px;
+}
+    
+  }
