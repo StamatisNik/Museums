@@ -20,11 +20,16 @@
               <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
             </svg>
             </div>
-            <form method="POST" action="#">
+            <form method="POST" action="/register" id="myForm">
+            {{#if error}}
+                  <div class="col-md-12 mt-3 text-center errormess">
+                    {{errorMessage}}
+                  </div>
+                  {{/if}}
             <div class="form-group row mt-4">
                 <label for="First-name" class="col-md-4 col-form-label">First Name</label>
                 <div class="col-md-7 mb-3">
-                  <input type="text" class="form-control" id="First-name" placeholder="George" required>
+                  <input type="text" class="form-control" name="firstname" id="First-name" placeholder="George"  {{#if error}} value="{{firstname}}"  {{/if}} required >
                 </div>
     
                 </div>
@@ -32,14 +37,14 @@
                 <div class="form-group row">
                   <label for="lname-id" class="col-md-4 col-form-label">Last Name</label>
                   <div class="col-md-7 mb-3">
-                    <input type="text" class="form-control" id="lname-id" placeholder="Papadopoulos" required >
+                    <input type="text" class="form-control" name="lastname" id="lname-id" placeholder="Papadopoulos"  {{#if error}} value="{{lastname}}" {{/if}} required >
                   </div>
                 </div>
     
                 <div id="email-container" class="form-group row">
                     <label for="Email-id" class="col-md-4 col-form-label">Email</label>
                     <div class="col-md-7 mb-3">
-                      <input type="email" class="form-control"   id="email-id" placeholder="yourname@email.com" required  >
+                      <input type="email" class="form-control" name="email"   id="email-id" placeholder="yourname@email.com"  {{#if error}} value="{{email}}" {{/if}} required  >
                     </div>
                         </div>
                   
@@ -47,7 +52,7 @@
                   <div id="confemail-container" class="form-group row">
                     <label for="Confirm-email" class="col-md-4 col-form-label">Confirm email</label>
                     <div class="col-md-7 mb-3">
-                      <input type="email" class="form-control" id="confirm-email" required>
+                      <input type="email" class="form-control" name="confEmail"  id="confirm-email"  {{#if error}} value="{{emailconf}}" {{/if}} required>
                     
                     </div>
                   </div>
@@ -55,25 +60,25 @@
                   <div id="pass-container" class="form-group row">
                     <label for="password" class="col-md-4 col-form-label">Password</label>
                     <div class="col-md-7 mb-3">
-                    <input type="password" class="form-control" name="password" id="password" required>
+                    <input type="password" class="form-control" name="password" id="password"  required>
                     </div>
           
                 </div>
                 <div id="passconf-container" class="form-group row">
                     <label for="passwordConfirm" class="col-md-4 col-form-label">Password Confirm</label>
                     <div class="col-md-7 mb-3">
-                    <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" required>
+                    <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"  required>
                     </div>
-                   
-                   
                 </div>
                   <div id="dob-container" class="form-group row">
                     <label for="DOB-id" class="col-md-4 col-form-label">Date of Birth</label>
                     <div class="col-md-7 mb-3">
-                      <input type="text" class="form-control"   id="DOB-id" placeholder="DD/MM/YYYY" required >
+                      <input type="text" class="form-control" name="dob"   id="DOB-id" placeholder="DD/MM/YYYY"  {{#if error}} value="{{dob}}" {{/if}} required >
                     </div>
                     
                   </div>
+
+                  
 
                   <div class="col-md-4">
                     <button class="submit-button" type="submit" id="submitButton">Register<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
