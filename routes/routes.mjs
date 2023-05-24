@@ -93,14 +93,7 @@ router.get("/register", async (req, res)=>
   });
   
 })
-router.post("/logout" ,(req,res)=>
-{
-  req.session.destroy((err)=>
-  {
-    if (err) throw err;
-    res.redirect("/")
-  })
-})
+
 
 
 router.post('/tickets', async (req, res) => {
@@ -141,30 +134,41 @@ router.get("/user-info" ,isAuth,(req,res)=>
   
 
   router.get("/card-info",isAuth, (req, res) => {
-    res.render('partials/cardinfo', {
-      style:"card-info-styles.css",
-      script:"card-info-script.js",  
-    });
+    res.render("card-info", {
+      title:"card-info",
+      layout: lay4,
+      header: "partials/headertickets",
+      footer: "partials/tapfooter",
+      style:"public/css/card-info-styles.css",
+      script: "public/js/card-info-script.js",  
+    })
   });
   
-  //const lay1 = "main.hbs";
  
   
   router.get("/", (req,res)=>{
-      res.render("home",{
-          title:"Museum Official Website",
-          //lay1, 
-          header: "partials/header",
-          style:"public/css/stylehome.css",
-          link1:"/tickets",
-          link2:"/whatson",
-          link3:"/explore",
-          name1:"Book a Ticket",
-          name2:"What's on",
-          name3:"Explore",
-          footer: "partials/footer",
-          script:"public/js/scripthome.js"});
-  });
+   
+  
+    res.render("home",{
+      title:"Museum Official Website",
+      //lay1, 
+      header: "partials/header",
+      style:"public/css/stylehome.css",
+      link1:"/tickets",
+      link2:"/whatson",
+      link3:"/explore",
+      name1:"Book a Ticket",
+      name2:"What's on",
+      name3:"Explore",
+      footer: "partials/footer",
+      script:"public/js/scripthome.js",
+      userLoggedIn:req.session.isAuth
+    });
+     
+
+  
+ 
+});
   
   router.get("/whatson" , (req, res) =>{
       res.render("whatson",{
@@ -179,7 +183,8 @@ router.get("/user-info" ,isAuth,(req,res)=>
           name2:"Book a Ticket",
           name3:"Explore",
           footer: "partials/footer",
-          script:"public/js/scriptfooter.js"});
+          script:"public/js/scriptfooter.js",
+          userLoggedIn:req.session.isAuth});
   });
   
   
@@ -196,7 +201,8 @@ router.get("/user-info" ,isAuth,(req,res)=>
           name2:"Book a Ticket",
           name3:"What's on",
           footer:"partials/footer",
-          script:"public/js/scriptfooter.js"});
+          script:"public/js/scriptfooter.js",
+          userLoggedIn:req.session.isAuth});
   });
   
   router.get("/tickets", (req, res) =>{
@@ -212,7 +218,8 @@ router.get("/user-info" ,isAuth,(req,res)=>
         name2:"What's on",
         name3:"Explore",
         footer: "partials/tapfooter",
-        script:"public/js/tickets-and-prices-script.js"});
+        script:"public/js/tickets-and-prices-script.js",
+        userLoggedIn:req.session.isAuth})
   });
   
   
@@ -223,21 +230,12 @@ router.get("/user-info" ,isAuth,(req,res)=>
       header:"partials/profileheader",
       footer: "partials/footerempty",
       style:"public/css/profile.css",
-      script:"public/js/scriptprofile.js"
+      script:"public/js/scriptprofile.js",
+      userLoggedIn:req.session.isAuth
     });
   });
   
   
-  router.get("/card-info", (req, res) => {
-    res.render("card-info", {
-      title:"card-info",
-      layout: lay4,
-      header: "partials/headertickets",
-      footer: "partials/tapfooter",
-      style:"public/css/card-info-styles.css",
-      script: "public/js/card-info-script.js",  
-    });
-  });
   
   
   router.get("/register",(req,res) =>{
@@ -252,7 +250,15 @@ router.get("/user-info" ,isAuth,(req,res)=>
   });
   
   
-    
+
+  router.post("/logout" ,(req,res)=>
+{
+  req.session.destroy((err)=>
+  {
+    if (err) throw err;
+    res.redirect("/")
+  })
+})
   
 
 export {router};
