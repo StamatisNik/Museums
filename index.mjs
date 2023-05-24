@@ -60,11 +60,6 @@ sessionStore.onReady().then(() => {
 app.engine("hbs",engine({extname: ".hbs"}));
 app.set("view engine","hbs");
 
-app.get('/', (req, res) => {
-  
-  res.send('Hello, World!');
-});
-
 
 app.use("/", router);
 

@@ -122,6 +122,7 @@ const connection = mysql.createConnection({
           };
            return res.redirect("/login?password=invalid");
         }
+      
           req.session.isAuth=true;
           return res.redirect("/tickets");
         }  

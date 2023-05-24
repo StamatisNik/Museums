@@ -3,7 +3,6 @@ import * as db_model from "../model/model.mjs";
 const router=express.Router();
 
 
-
 const isAuth=(req,res,next)=>
 {
   if(req.session.isAuth)
@@ -16,15 +15,10 @@ const isAuth=(req,res,next)=>
   }
 }
 
-
-router.get('/tickets', isAuth, async (req, res) => {
-  res.render('ticketsandprices', {
-    style: "Tickets-and-Prices-Styles.css",
-    script:"tickets-and-prices-script.js"
-    
-  });
-   
-});
+const lay2 = "main2.hbs";
+const lay3 = "main3.hbs";
+const lay4 = "main4.hbs"
+const lay5="main5.hbs"; 
 
 
 
@@ -46,7 +40,8 @@ router.get("/login", async (req, res) => {
   const passwordError = req.query.password;
   const emailError=req.query.email;
   res.render('login', {
-    style: "loginstyles.css",
+    style: "/public/css/loginstyles.css",
+    layout: lay2, 
     email:logInEmail,
     passwordError:passwordError,
     emailError:emailError,
@@ -85,8 +80,9 @@ router.get("/register", async (req, res)=>
   
 
   res.render("register", {
-    style: "registerstyles.css",
-    script: "registerscript.js",
+    layout:lay2,
+    style: "/public/css/registerstyles.css",
+    script: "/public/js/registerscript.js",
     error: error,
     errorMessage: "Email already exists,please try a new one!",
     firstname: firstname,
@@ -127,6 +123,7 @@ router.post("/user-info",async (req,res)=>
   const time=userInfo.time;
   const country=userInfo.country;
   const ticketType=userInfo.ticketType;
+  console.log(req.body);
   await db_model.insertUserData(date,time,country,ticketType);
   res.redirect("/card-info");
 })
@@ -135,8 +132,10 @@ router.post("/user-info",async (req,res)=>
 router.get("/user-info" ,isAuth,(req,res)=>
 {
   res.render('ticketform', {
-    style: "ticket-form-style.css",
-    script: "ticket-form-script.js"
+    layout:lay5,
+    style: "/public/css/ticket-form-style.css",
+    script: "/public/js/ticket-form-script.js"
+   
   });
 })
   
@@ -148,14 +147,112 @@ router.get("/user-info" ,isAuth,(req,res)=>
     });
   });
   
-  router.get("/whatson", (req, res) => {
-    res.render('partials/ticketform', {
-      
+  //const lay1 = "main.hbs";
+ 
+  
+  router.get("/", (req,res)=>{
+      res.render("home",{
+          title:"Museum Official Website",
+          //lay1, 
+          header: "partials/header",
+          style:"public/css/stylehome.css",
+          link1:"/tickets",
+          link2:"/whatson",
+          link3:"/explore",
+          name1:"Book a Ticket",
+          name2:"What's on",
+          name3:"Explore",
+          footer: "partials/footer",
+          script:"public/js/scripthome.js"});
+  });
+  
+  router.get("/whatson" , (req, res) =>{
+      res.render("whatson",{
+          title:"What's on",
+          //lay1,
+          header:"partials/header",
+          style:"public/css/stylewhatson.css",
+          link1:"/",
+          link2:"/tickets",
+          link3:"/explore",
+          name1:"Home",
+          name2:"Book a Ticket",
+          name3:"Explore",
+          footer: "partials/footer",
+          script:"public/js/scriptfooter.js"});
+  });
+  
+  
+  router.get("/explore" , (req, res) =>{
+      res.render("explore",{
+          title:"Explore",
+         // lay1,
+          header: "partials/header",
+          style:"public/css/styleexplore.css",
+          link1:"/",
+          link2:"/tickets",
+          link3:"/whatson",
+          name1:"Home",
+          name2:"Book a Ticket",
+          name3:"What's on",
+          footer:"partials/footer",
+          script:"public/js/scriptfooter.js"});
+  });
+  
+  router.get("/tickets", (req, res) =>{
+    res.render("ticketsandprices",{
+        title:"Tickets and Prices",
+        layout:lay3,
+        header: "partials/header",
+        style: "public/css/Tickets-and-Prices-Styles.css",
+        link1:"/",
+        link2:"/whatson",
+        link3:"/explore",
+        name1:"Home",
+        name2:"What's on",
+        name3:"Explore",
+        footer: "partials/tapfooter",
+        script:"public/js/tickets-and-prices-script.js"});
+  });
+  
+  
+  router.get("/profile",(req,res) =>{
+    res.render("profile",{
+      title:"profile", 
+      layout: lay2, 
+      header:"partials/profileheader",
+      footer: "partials/footerempty",
+      style:"public/css/profile.css",
+      script:"public/js/scriptprofile.js"
     });
   });
-
-  router.get("/explore", (req, res) => {
-    res.send("card");
-  })
+  
+  
+  router.get("/card-info", (req, res) => {
+    res.render("card-info", {
+      title:"card-info",
+      layout: lay4,
+      header: "partials/headertickets",
+      footer: "partials/tapfooter",
+      style:"public/css/card-info-styles.css",
+      script: "public/js/card-info-script.js",  
+    });
+  });
+  
+  
+  router.get("/register",(req,res) =>{
+    res.render("register",{
+      title:"Sign Up", 
+      layout: lay2, 
+      header:"partials/profileheader",
+      footer: "partials/footerempty",
+      style:"public/css/register.css",
+      script:"public/js/register.js"
+    });
+  });
+  
+  
+    
+  
 
 export {router};
