@@ -1,0 +1,88 @@
+<header>
+      <nav class="navbar navbar-expand bg-dark">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white  Menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="menu" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>Menu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href={{link1}}>{{name1}}</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href={{link2}}>{{name2}}</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href={{link3}}>{{name3}}</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <img src="/public/images/museum-logo.png" class="navbar-brand text-white me-auto mb-6 mb-lg-0" id="logo" alt="Vatican Museum logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            {{#if userLoggedIn}}
+            <div class="dropdown">
+              <div class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <img src="/public/images/user.png" class="userpic" alt="users prof picture">
+                  username
+            </div>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start custom-dropdown-menu ">
+                
+                <li class="text-center"><img src="/public/images/user.png" class="userpic2" alt="users prof picture">&nbsp;username</li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-center" href="/profile">
+                  Edit Profile
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <form method="POST" action="/logout">
+                    <button  class="dropdown-item text-center" type="submit" >Logout<img class="logout" src="/public/images/logout.png" alt="Logout Image"></button>
+                   
+                  </form>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {{else}}
+              
+            <div class="dropdown">
+              <div class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle userpic" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg> Log In 
+            </div>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start custom-dropdown-menu ">
+                
+                <li class="text-center"><img src="/public/images/profile.png" class="userpic2" alt="users prof picture">&nbsp;user</li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-center" href="/login">
+                  Log In 
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item text-center" href="/register">
+                    Sign Up 
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          {{/if}}
+
+          </div>
+        </div>
+    </nav>
+    </header>
+                  
+                 
+                   
+          
