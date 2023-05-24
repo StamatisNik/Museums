@@ -7,7 +7,7 @@ body{
 
 header
 {
-    background: url(vatican-museum-tickets.png) no-repeat center center;
+    background: url(/public/images/vatican-museum-tickets.png) no-repeat center center;
      background-size: cover;
     max-width: 100%;
     margin-right: 0;

@@ -114,7 +114,7 @@ function groupPeopleInput()
   const skipTheLinePrice=60;
     
     
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function(event) {
       console.log(count);
       //Standard Ticket
         if(storedRadioValue==="Standard Ticket")
@@ -123,6 +123,22 @@ function groupPeopleInput()
         if(count!==parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
         {
           event.preventDefault();
+
+         
+          const formData = new URLSearchParams(new FormData(form))
+
+          try {
+            const response = await fetch('/user-info', {
+              method: 'POST',
+              body: formData,
+            });
+        
+            // Handle the response
+          } catch (error) {
+            // Handle any errors
+          }
+    console.log("passed")
+
           const nameContainer=document.getElementById("name-info");
           const newName=document.createElement("div");
           newName.innerHTML=(count +"."+" "+standardPrice+"€");
@@ -133,8 +149,14 @@ function groupPeopleInput()
           
           checkbox.checked=false;
           count++;
+
          
         }
+     
+
+          
+         
+        
   
         else if(count!==parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
         {
@@ -435,11 +457,6 @@ function groupPeopleInput()
         count++;
        
         
-        
-
-       
-        
-        
        
       }
 
@@ -525,25 +542,16 @@ function groupPeopleInput()
       
     })
   }
-    /*
-    const formDataArray = [];
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
     
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
     
-      formDataArray.push(data);
-      form.reset();
-    });
     
     // Function to submit the stored form data
     
     
+
     
     
-}*/
+
 
 
 

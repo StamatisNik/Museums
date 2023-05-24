@@ -12,7 +12,7 @@
                     <button class="popup-btn" id="popupSuccessBtn">OK</button>
                 </div>
             </div>
-        <form id="my-form">
+        <form id="my-form" method="POST" action="/profile">
             <div class="profile-pic-container">
                 <img class="profpic" src="/public/images/profile.png" alt="Users Profile Picture">
                 <input class="file-input" type="file" accept="image/*">
@@ -21,22 +21,22 @@
             <div class="border">
               <div class="form-element">
                   <label>Email:</label>
-                  <input id="email" type="email" value="example@example.com">
+                  <input id="email" name="email" type="email" value="{{email}}">
               </div>
               <hr>
               <div class="form-element">
                   <label>Name:</label>
-                  <input id="name" type="text" value="David">
+                  <input id="name" name="firstname" type="text" value="{{username}}">
               </div>
               <hr>
               <div class="form-element">
                   <label>Last Name:</label>
-                  <input id="lastname" type="text" value="David">
+                  <input id="lastname" name="lastname" type="text" value="{{userlastname}}">
               </div>
               <hr>
              <div class="form-element">
                   <label>Password</label>
-                  <input id="password" type="password" value="123456A!">
+                  <input id="password" name="password" type="password" value="{{passsword}}">
               </div>
           </div>
         
