@@ -28,7 +28,7 @@ const correctIconClonePass=correctIcon.cloneNode(true);
 const correctIconCloneConfPass=correctIcon.cloneNode(true);
 
 const emailRegex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
-const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+const dateRegex = /^(?!0000)(?:19|20)\d{2}\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[12]\d|3[01])$/;
 const passwordRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+=_])[A-Za-z\d@$!%*#?&+=_]{8,}$/
 
 
@@ -39,8 +39,7 @@ Validation(emailInp,confEmailInp,dateInp,passwordInp,passwordConfInp,submitBtn);
 
 
 function Validation(email,confEmail,date,password,passwordConfirm,submit) {
-    
-   
+ 
   
   
   email.addEventListener("input", function() {
@@ -132,45 +131,30 @@ function Validation(email,confEmail,date,password,passwordConfirm,submit) {
     }
   });
     
-
-  password.addEventListener("input",function()
-    {
-
-      if (password.value === "") {
-        correctIconClonePass.style.display = "none";
-        falseIconClonePass.style.display = "none";
-        password.removeAttribute("id","errorMessage");
-        passError.classList.remove("show");
-        return;
-      }
-      
-       else if(password.value.match(passwordRegex))
-  {
-    success.style.display="block";
+password.addEventListener("input", function() {
+  if (password.value === "") {
+    correctIconClonePass.style.display = "none";
+    falseIconClonePass.style.display = "none";
+    password.removeAttribute("id", "errorMessage");
+    passError.style.maxHeight = "0";
+    return;
+  } else if (password.value.match(passwordRegex)) {
+    success.style.display = "block";
+    passError.style.maxHeight = "0";
     passError.classList.remove("show");
     correctIconClonePass.style.display = "block";
     passwordContainer.append(correctIconClonePass);
     falseIconClonePass.style.display = "none";
-    
-  
-  }
-
-  
-
-  else
-  {
-    success.style.display="none";
-    passError.style.display = "block";
+  } else {
+    success.style.display = "none";
+    passError.style.maxHeight = "100px"; 
     passError.classList.add("show");
-    passError.innerHTML="Password must contain at least one number,letter,symbol and have at least 8 characters! ";
+    passError.innerHTML = "Password must contain at least one number, letter, symbol, and have at least 8 characters!";
     correctIconClonePass.style.display = "none";
     passwordContainer.append(falseIconClonePass);
     falseIconClonePass.style.display = "block";
-    
-    
   }
-        
-    })
+});
 
 
     password.addEventListener("input",()=>
@@ -293,3 +277,5 @@ function checkValidation(email,confEmail,date,password,passwordConfirm,submit) {
 
   
 }
+
+

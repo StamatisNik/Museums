@@ -12,7 +12,7 @@ header{
     max-width: 100%;
 }
 
-.logo{
+#logo{
     width: 256px;
     padding: 15px;
    
@@ -105,17 +105,17 @@ label::after {
 }
 
 
-
 #passerrorMessage {
     color: red;
     font-size: 90% !important;
-    transition: opacity 0.4s ease;
-    opacity: 0; 
-}
-
-#passerrorMessage.show {
-    opacity: 1; 
-}
+    transition: max-height 0.5s ease;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  
+  #passerrorMessage.show {
+    max-height: 100px; 
+  }
 
 #successMessage {
     
@@ -211,6 +211,12 @@ font-size: 22px;
 #falseSvgContainer
 {
     display: none;
+}
+
+.errormess{
+    visibility: visible;
+    color: red;
+
 }
 
 @media (max-width: 768px) {
@@ -440,6 +446,13 @@ font-size: 22px;
     .cols{
         width: 310px;
     }
+
+    
+.errormess{
+    visibility: visible;
+    color: red;
+
+}
 
     
     

@@ -171,6 +171,7 @@ function groupPeopleInput()
   
         else if(count===parseInt(peopleNumber.value) && ticketType.value==="Adult Ticket")
         {
+          event.preventDefault();
           const nameContainer=document.getElementById("name-info");
           const newName=document.createElement("div");
           newName.innerHTML=count +"."+standardPrice+"€";
@@ -178,6 +179,10 @@ function groupPeopleInput()
           newName.classList.add("i");
           nameContainer.append(newName);
           count++;
+
+          setTimeout(function() {
+            form.submit(); 
+          }, 1500);
         }
   
         else if(count===parseInt(peopleNumber.value) && ticketType.value==="Student Ticket")
@@ -519,7 +524,8 @@ function groupPeopleInput()
     
       
     })
-    
+  }
+    /*
     const formDataArray = [];
 
     form.addEventListener('submit', async (event) => {
@@ -537,36 +543,7 @@ function groupPeopleInput()
     
     
     
-}
-
-
-/*async function submitFormData() {
-  for (const formData of formDataArray) {
-    try {
-      const response = await fetch('/your-submit-url', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        const responseData = await response.json();
-        // Handle the successful response here
-        console.log('Response:', responseData);
-      } else {
-        // Handle the error response here
-        console.error('Error:', response.status);
-      }
-    } catch (error) {
-      // Handle any network or other errors here
-      console.error('Error:', error);
-    }
-  }
-
-  // Clear the stored form data after submission
-  formDataArray.length = 0;
 }*/
+
 
 

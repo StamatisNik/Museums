@@ -5,35 +5,18 @@ body
     font-family: "Raleway";
 }
 
-header
-{
-    max-width: 100%;     
-}
   
 
 article
 {
-    font-size: 32px;
+    font-size: 22px;
 }
 
-.logo
-{
-    
-    width: 256px;
-    padding: 15px;
-    margin:10px;
-}
 
-.dropdown-menu
-{
-    width: 300px;
-    /*height: 200px;
-    padding: 30px;*/
-}
 
 h1
 {
-    font-size: 7rem;
+    font-size: 5rem;
     width: 100%;
    
 }
@@ -130,7 +113,7 @@ hr:not(.dropdown-divider)
 
   section
   {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   svg{
@@ -222,4 +205,9 @@ footer
 .extraPadding
 {
     padding: 15px;
+}
+
+#ticket-paragraph
+{
+    font-size: 26px;
 }
