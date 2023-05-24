@@ -16,6 +16,7 @@ const isAuth=(req,res,next)=>
   }
 }
 
+
 router.get('/tickets', isAuth, async (req, res) => {
   res.render('ticketsandprices', {
     style: "Tickets-and-Prices-Styles.css",
@@ -23,32 +24,9 @@ router.get('/tickets', isAuth, async (req, res) => {
     
   });
    
-  
-  
-  
 });
 
-/*
-router.post('/user-info', async (req, res) => {
-  try {
-    const formData = req.body;
-    const Ticket = formData.Ticket;
 
-    await db_model.insertDataIntoTable(Ticket);
-
-    console.log('Data inserted successfully.');
-
-    res.render('ticketform', {
-      style: "ticket-form-style.css",
-      script: "ticket-form-script.js"
-    });
-  } catch (error) {
-
-    console.error(error);
-   
-  }
-});
-*/
 
 router.post("/login", async (req, res) => {
   const LoginData = req.body;
@@ -86,11 +64,10 @@ router.get("/login", async (req, res) => {
   const email = RegisterData.email ;
   const confEmail = RegisterData.confEmail ;
   const password = RegisterData.password ;
-  const passConf = RegisterData.passwordConfirm 
   const date = RegisterData.dob ;
   
   
-    await db_model.UserValidationRegister(firstname,lastname,email,confEmail, password,passConf,date,req,res);
+    await db_model.UserValidationRegister(firstname,lastname,email,confEmail, password,date,req,res);
   
   
 })
@@ -130,10 +107,41 @@ router.post("/logout" ,(req,res)=>
 })
 
 
+router.post('/tickets', async (req, res) => {
+    const formData = req.body;
+    const Ticket = formData.Ticket;
 
+    await db_model.insertDataIntoTable(Ticket);
+
+    console.log('Data inserted successfully.');
+
+   res.redirect("/user-info");
+ 
+});
+
+router.post("/user-info",async (req,res)=>
+{
+  const userInfo=req.body;
+  const peoplegroup=req.peoplegroup;
+  const date=userInfo.date;
+  const time=userInfo.time;
+  const country=userInfo.country;
+  const ticketType=userInfo.ticketType;
+  await db_model.insertUserData(date,time,country,ticketType);
+  res.redirect("/card-info");
+})
+
+
+router.get("/user-info" ,isAuth,(req,res)=>
+{
+  res.render('ticketform', {
+    style: "ticket-form-style.css",
+    script: "ticket-form-script.js"
+  });
+})
   
 
-  /*router.get("/card-info", (req, res) => {
+  router.get("/card-info",isAuth, (req, res) => {
     res.render('partials/cardinfo', {
       style:"card-info-styles.css",
       script:"card-info-script.js",  
@@ -148,6 +156,6 @@ router.post("/logout" ,(req,res)=>
 
   router.get("/explore", (req, res) => {
     res.send("card");
-  });*/
+  })
 
 export {router};
