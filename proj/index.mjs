@@ -12,8 +12,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-app.use(express.urlencoded({ extended: false }));
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use("/public",express.static(path.join(__dirname, '/public')))
 const MySQLStore = MySQLStoreFactory(session);
 
@@ -44,7 +44,7 @@ app.use(session({
   cookie: {
     originalMaxAge: 86400000, 
     expires: new Date(Date.now() + 86400000), 
-    httpOnly: true,
+    httpOnly: true
   }
 }));
 
