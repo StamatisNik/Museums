@@ -1,0 +1,201 @@
+ <article>
+
+        <div class="container mt-5">
+            <div class="row">
+                <h1>Tickets and Prices</h1>
+    
+            </div>
+            
+        </div>
+        
+        <div class="container mt-3 ml-3">
+          <div class="row">
+                <p id="ticket-paragraph">
+                    Plan your visit to the Vatican Museum and make the most of your time exploring the rich history and art on display. All entrance tickets include admission to the permanent collection as well as any current temporary exhibitions. We highly recommend booking your tickets in advance online. This will not only save you time but also guarantee your spot and allow you to skip the lines on the day of your visit. Don't miss out on this incredible opportunity to discover one of the world's most fascinating collections of art and artifacts.
+                </p>
+              
+    
+    
+            
+          </div>
+            
+    
+        </div>
+
+        
+
+
+        <div class="container mt-3 ml-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 id="ticket-prices">
+                        Ticket Prices  
+                      </h2>
+    
+                      <p>Ticket prices differ depending on the exhibition,<a href="#more" class="read-more-anchor"> <span id="read-more"> tap here for more information.</span> </a></p>
+
+                </div>
+           
+
+                
+
+            </div>
+            
+                  
+                  
+                  <div class="row" id="more">
+
+                    <h4>Ticket prices:</h4>
+
+                    <ul>
+                        <li>Adults: Full price.</li>
+                        <li>Visitors under 15: 40 % discount (school groups excluded).</li>
+                        <li> Students: 50 % discount upon presentation of your (international) student card or proof of enrolment.</li>
+                    </ul>
+
+                  </div>
+        </div>
+
+                </article>
+                  
+                  <section>
+                  <div class="container mt-4 ">
+                  <div class="row">
+                    <hr>
+
+                  </div>
+
+                  <div class="row text-center mb-2" id="ticket-forms">
+                    <h2>Choose Your Ticket</h2>
+                  </div>
+
+                  
+                 <form method="POST" action="/tickets"> 
+                  <div class="row">
+                    <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch ">
+                      <div class="card" style="width: 18rem;">
+                        <label>
+                          <input type="radio" name="Ticket" value="Standard Ticket"  required>
+                          <img class="card-img-top ela" src="/public/images/Vatican-Museums-tickets-cost.jpg" alt="Standad Ticket image">
+                        </label>
+                        <div class="card-body">
+                          <h5 class="card-title">Standard Ticket</h5>
+                          <p class="card-text">Vatican:Museums &amp; Sistine Chapel Entrance ticket.</p>
+                          <p>Price:20€</p>
+                          <p> <a href="/whatson#exhibition1" target="_blank" class="btn btn-primary">Read more...</a></p>
+
+                        </div>
+                      </div>
+                       
+
+                    </div>
+
+                    <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                      <div class="card" style="width: 18rem;">
+                        <label>
+                          <input type="radio" name="Ticket" value="Early Access Ticket" required>
+                          <img class="card-img-top ela" src="/public/images/Vatican-Museums-tickets-cost.jpg" alt="Early Acces Ticket image">
+                        </label>
+                        <div class="card-body">
+                          <h5 class="card-title">Early Access Ticket</h5>
+                          <p class="card-text">Early Vatican,Sistine Chapel &amp; Basilica Guided Tour.</p>
+                          <p>Price:35€</p>
+                          <p> <a href="/whatson#exhibition2" target="_blank" class="btn btn-primary">Read more...</a></p>
+
+                        </div>
+                      </div>
+                       
+
+                    </div>
+
+                
+
+             
+
+                  <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                    <div class="card" style="width: 18rem;">
+                      <label>
+                        <input type="radio" name="Ticket" value="Turn The lights On" required>
+                        <img class="card-img-top ela" src="/public/images/Vatican-Museums-tickets-cost.jpg" alt="Turn The lights on ticket image" >
+                      </label>
+                      <div class="card-body">
+                        <h5 class="card-title">Turn The lights On</h5>
+                        <p class="card-text">Turning the lights on at the Vatican Museums.</p>
+                        <p>Price:45€</p>
+                        <p> <a href="/whatson#exhibition3" target="_blank" class="btn btn-primary">Read more...</a></p>
+
+                      </div>
+                    </div>
+                     
+
+                  </div>
+
+                  <div class="col-md-3 col-xs-2 mt-2 mb-3 d-flex align-items-stretch">
+                    <div class="card" style="width: 18rem;">
+                      <label>
+                        <input type="radio" name="Ticket" value="Skip-The-Ticket-Line-Tour" required>
+                        <img class="card-img-top ela" src="/public/images/Vatican-Museums-tickets-cost.jpg" alt="Skip the line tour ticket image" >
+                        
+                      </label>
+
+                      <div class="card-body">
+                        <h5 class="card-title">Skip-The-Ticket-Line-Tour</h5>
+                        <p class="card-text">Vatican Museums &amp; Sistine Chapel Skip-The-Ticket-Line-Tour.</p>
+                        <p>Price:60€</p>
+                        <p> <a href="/whatson#exhibition4" target="_blank" class="btn btn-primary">Read more...</a></p>
+
+                      </div>
+                      
+                    </div>
+                     
+
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-12 col-12  text-center">
+                    <a href="/user-info" class="book"  id="ticket-btn"> <button type="submit" class="submit-button">Tickets <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
+                     <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                     <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
+                   </svg> </button>  </a> 
+
+             </div>
+                </div>
+              </form>
+              <div class="row mt-4">
+                <hr>
+
+              </div>
+              </div>
+
+             
+              </section>
+
+
+              <section>
+                <div class="container mt-4 ">
+                 
+
+                  <div class="row text-center mb-2" id="terms-id">
+                    <h2>Terms And Conditions</h2>
+                  </div>
+
+                
+
+                <div class="row">
+                  <ol>
+                    <li>Booking Confirmation: Your booking confirmation will be sent via email after you complete your booking process. It is your responsibility to check that all details in the confirmation email are correct. If there are any errors, please contact us immediately.</li>
+                    <li>Ticket Prices: The prices of Vatican Museum tickets are subject to change without prior notice.</li>
+                    <li>Entry Time: Your ticket indicates the date and entry time for the Vatican Museum. Please arrive at least 15 minutes before the entry time. Entry may be refused if you arrive after the entry time.</li>
+                    <li>Security Check: All visitors are required to go through a security check before entering the Vatican Museum. Large bags and backpacks are not allowed. Visitors must check their bags at the cloakroom before entering.</li>
+                    <li>No Refunds: Tickets are non-refundable and non-exchangeable.</li>
+                    <li>Changes to Booking: Any changes to your booking must be made at least 24 hours prior to the entry time. Changes are subject to availability.</li>
+                    <li>Force Majeure: We will not be liable for any delay, cancellation, or change to your booking due to circumstances beyond our control, such as strikes, natural disasters, or other events beyond our control.</li>
+                    <li>Liability: We will not be liable for any loss or damage to personal belongings, accidents, injuries, or other harm that may occur during your visit to the Vatican Museum.</li>
+                    <li>Governing Law: These terms and conditions are governed by the laws of Italy.</li>
+                  </ol>
+                  <p>By booking a ticket to the Vatican Museum, you agree to these terms and conditions.</p>
+                </div>
+              </div>
+
+            </section>
