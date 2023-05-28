@@ -9,13 +9,15 @@ express,express-handlebars,express-session,dotenv,bcrypt,crypto,handlebars,faker
 
 3.Εκτέλεση του προγράμματος:
 Στο τερματικό της node προχωράμε στις επόμενες εντολές για να εκτελεστεί το πρόγραμμα μας:
+
 Με χρήση VScode :
 npm install
 npm init -y 
 εφόσον έχουμε εγκαταστήσει το nodemon με την εντολή npm install nodemon --dev -save 
 αντικαθιστούμε στο αρχείο package.json το “test” με “test”:”nodemon index.mjs”
 Στην συνέχει εκτελούμε την εντολή npm run test και βλέπουμε το πρόγραμμα να τρέχει 
-Με τερματικό της node:
+
+τερματικό της node:
 Ο χρήστης χρειάζεται να βρει το μονοπάτι στο οποίο  υπάρχει το αρχείο index.mjs και να πληκτρολογήσει run index.mjs αν όλα έχουν πάει καλά το πρόγραμμα τρέχει.
 Ο χρήστης μπορεί να δει την ιστοσελίδα στο port το οποίο έχει επιλέξει.
 
